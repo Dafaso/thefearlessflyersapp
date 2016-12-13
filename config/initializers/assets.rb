@@ -12,3 +12,11 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( swiper.jquery.min.js )
 Rails.application.config.assets.precompile += %w( app.js )
 Rails.application.config.assets.precompile += %w( swiper.min.css )
+
+Rails.application.config.assets.precompile += %w( justifiedGallery.min.css )
+
+Rails.application.config.assets.precompile += %w( baguetteBox.min.css )
+Rails.application.config.assets.precompile += %w( jquery.justifiedGallery.min.js )
+
+Rails.application.config.assets.precompile += %w( baguetteBox.min.js )
+

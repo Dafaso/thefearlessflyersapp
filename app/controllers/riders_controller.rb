@@ -1,6 +1,6 @@
 class RidersController < ApplicationController
     
-    before_action :require_rider, only: [:index,:show,:edit,:update]
+#    before_action :require_rider, only: [:index,:show,:edit,:update]
     
     def new
        @rider = Rider.new 

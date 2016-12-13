@@ -19,12 +19,16 @@ class Rider < ApplicationRecord
     def self.search(name,shirt)
         
         if name==""
-            where(" shirt ~ ? ", shirt)
+            where(" shirt IS ? ", shirt)
         elsif shirt==""   
-            where("firstname ILIKE ? OR lastname ILIKE ?", "%#{name}%", "%#{name}%")
-        else where("firstname ILIKE ? AND shirt ~ ?", "%#{name}%", shirt)
+            where("firstname LIKE ? OR lastname LIKE ?", "%#{name}%", "%#{name}%")
+        else where("firstname LIKE ? AND shirt IS ?", "%#{name}%", shirt)
         end     
     end
     
     
 end
+
+#for heroku / postgres: 
+#    LIKE => ILIKE 
+#    IS => ~

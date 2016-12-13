@@ -10,7 +10,8 @@
         
           <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
        
-        <%= stylesheet_link_tag 'swiper.min.css' %>
+        <%= stylesheet_link_tag 'justifiedGallery.min.css' %>
+        <%= stylesheet_link_tag 'baguetteBox.min.css' %>
         <%= stylesheet_link_tag 'application.css' %>
         
     </head>
@@ -64,32 +65,66 @@
         </div>    
     </header>
         
-		<br><br><br><br><br><br><br><br><br><br><br><br>
-        
-        <!-- Slider main container -->
-        <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide"><%= image_tag 'flyers_graduation.jpg' %> </div>
-        <div class="swiper-slide"><%= image_tag "group_bywater.jpg" %></div>
-        <div class="swiper-slide"><%= image_tag "instruction2.jpg" %></div>
-        ...
-            </div>
-            <!-- If we need pagination -->
-<!--            <div class="swiper-pagination"></div>-->
+        <div class="gallery">
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <a href="<%= image_path('diany_victorious.jpg')%>" title="Diany, feeling victorious." ><img src="<%= image_path('diany_victorious.jpg')%>" alt="Diany, feeling victorious."></a>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div> <!-- end of Slider main container -->
-     
+            <a href="<%= image_path('group_bywater.jpg')%>" title="Group By The Water" ><img src="<%= image_path('group_bywater.jpg')%>" alt="Group By The Water"></a>
+
+            <a href="<%= image_path('instruction2.jpg')%>" title="Instruction" ><img src="<%= image_path('instruction2.jpg')%>" alt="Instruction"></a>
+
+            <a href="<%= image_path('instruction1.jpg')%>" title="Instruction" ><img src="<%= image_path('instruction1.jpg')%>" alt="Instruction"></a>
+
+            <a href="<%= image_path('diany_ride.jpg')%>" title="Diany riding on the GWB." ><img src="<%= image_path('diany_ride.jpg')%>" alt="Diany riding on the GWB."></a>
+            
+            <a href="<%= image_path('diany_smile.jpg')%>" title="Happy to be on the road." ><img src="<%= image_path('diany_smile.jpg')%>" alt="Happy to be on the road."></a>
+            
+            <a href="<%= image_path('fearless_couple.jpg')%>" title="Fearless couple." ><img src="<%= image_path('fearless_couple.jpg')%>" alt="Fearless couple."></a>
+            
+            <a href="<%= image_path('flyer_crew.jpg')%>" title="Having fun in the sun." ><img src="<%= image_path('flyer_crew.jpg')%>" alt="Having fun in the sun."></a>
+            
+            <a href="<%= image_path('flyer_friends.jpg')%>" title="Flyer friends." ><img src="<%= image_path('flyer_friends.jpg')%>" alt="Flyer friends."></a>
+            
+            <a href="<%= image_path('flyer_group.jpg')%>" title="Flyer group photo." ><img src="<%= image_path('flyer_group.jpg')%>" alt="Flyer group photo."></a>
+            
+            <a href="<%= image_path('flyer_lunch_stop.jpg')%>" title="Lunch in the park." ><img src="<%= image_path('flyer_lunch_stop.jpg')%>" alt="Lunch in the park."></a>
+            
+            <a href="<%= image_path('flyer_team.jpg')%>" title="Out on the road." ><img src="<%= image_path('flyer_team.jpg')%>" alt="Out on the road."></a>
+            
+            <a href="<%= image_path('flyers_table.jpg')%>" title="Lunch stop." ><img src="<%= image_path('flyers_table.jpg')%>" alt="Lunch stop."></a>
+                        
+            <a href="<%= image_path('flyers_graduation2.jpg')%>" title="Flyers graduation 2015." ><img src="<%= image_path('flyers_graduation2.jpg')%>" alt="Flyers graduation 2015."></a>
+            
+            <a href="<%= image_path('flyers_graduation.jpg')%>" title="Fearless Flyers graduation 2016" ><img src="<%= image_path('flyers_graduation.jpg')%>" alt="Fearless Flyers graduation 2016"></a>
+            
+            <a href="<%= image_path('four_guys.jpg')%>" title="Flyer friends." ><img src="<%= image_path('four_guys.jpg')%>" alt="Flyer friends."></a>
+            
+            <a href="<%= image_path('foursome_group.jpg')%>" title="Fearless foursome." ><img src="<%= image_path('foursome_group.jpg')%>" alt="Fearless foursome."></a>
+                        
+            <a href="<%= image_path('flyers_table.jpg')%>" title="Lunch stop." ><img src="<%= image_path('flyers_table.jpg')%>" alt="Lunch stop."></a>
+                        
+            <a href="<%= image_path('group_shot_bywater.jpg')%>" title="Group shot on the west side bike path." ><img src="<%= image_path('group_shot_bywater.jpg')%>" alt="Group shot on the west side bike path."></a>
+             
+            <a href="<%= image_path('group_shot.jpg')%>" title="Group shot." ><img src="<%= image_path('group_shot.jpg')%>" alt="Group shot."></a>
+                        
+            <a href="<%= image_path('happy_group.jpg')%>" title="Happy to be riding." ><img src="<%= image_path('happy_group.jpg')%>" alt="Happy to be riding."></a>
+            
+            <a href="<%= image_path('josh_ride.jpg')%>" title="Josh, enjoying the ride." ><img src="<%= image_path('josh_ride.jpg')%>" alt="Josh, enjoying the ride."></a>
+            
+            <a href="<%= image_path('leads.jpg')%>" title="Ride leaders." ><img src="<%= image_path('leads.jpg')%>" alt="Ride leaders."></a>
+            
+            <a href="<%= image_path('looking_ahead.jpg')%>" title="Looking ahead." ><img src="<%= image_path('looking_ahead.jpg')%>" alt="Looking ahead."></a>
+            
+            <a href="<%= image_path('maireni_leo.jpg')%>" title="Maireni & Leo." ><img src="<%= image_path('maireni_leo.jpg')%>" alt="Maireni & Leo."></a>
+            
+            <a href="<%= image_path('tiffany_maireni_leo.jpg')%>" title="Tiffany, Maireni & Leo." ><img src="<%= image_path('tiffany_maireni_leo.jpg')%>" alt="Tiffany, Maireni & Leo."></a>
+            
+            <a href="<%= image_path('trio.jpg')%>" title="Trio." ><img src="<%= image_path('trio.jpg')%>" alt="Trio."></a>
+            
+            <a href="<%= image_path('warm_up.jpg')%>" title="Warming up." ><img src="<%= image_path('warm_up.jpg')%>" alt="Warming up."></a>
+    
         
-        
-        <!---------BX SLIDER---------->
+        </div>
         
         
    
@@ -107,10 +142,18 @@
         </div> 
         
 <!--        <script src="../../assets/app.js"></script>-->
-        $(document).ready(function(){
-            <%= javascript_include_tag 'app' %>
-            <%= javascript_include_tag 'swiper.jquery.min.js' %>
-        })  
+         
+        <%= javascript_include_tag 'baguetteBox.min.js' %>
+        <%= javascript_include_tag 'jquery.justifiedGallery.min.js' %>
+         <%= javascript_include_tag 'app' %>
+         
+        
+        
+        <script>baguetteBox.run('.gallery', {
+            
+        });
+        </script>
+        
         
 <!--        google analytics below-->
         

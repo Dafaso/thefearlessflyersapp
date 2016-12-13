@@ -7,9 +7,7 @@ class FlyersController < ApplicationController
         if params[:search] && params[:shirt]
             
             @riders = Rider.search(params[:search],params[:shirt]).order("firstname")
-            
-       
-        
+
         elsif params[:search] || params[:shirt]
             if params[:search]
                 params[:shirt]="" 
