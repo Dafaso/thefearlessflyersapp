@@ -19,4 +19,4 @@ class Flyer < ApplicationRecord
     
     
 end
-flyeradmin2017fearless
+ 
