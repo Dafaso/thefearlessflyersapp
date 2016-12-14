@@ -24,7 +24,7 @@
             
             
             <div id="browser-menu-youth" >
-            <a href="/" class="subRide selected">Home</a>
+            <a href="/" class="subRide">Home</a>
             <a href="static_pages/about" class="subRide menu-about">About</a>        
                 
                 <nav id="rides-drop">
@@ -38,13 +38,13 @@
                 </nav>    
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="static_pages/apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide">Sign-In</a>     
+            <a href="/sign_in" class="subRide selected">Sign-In</a>     
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
    
             </div>
         </div>    
         <div id="mobile_menu">
-            <a href="/" class="subRide selected">Home</a>
+            <a href="/" class="subRide">Home</a>
             <a href="static_pages/about.html" class="subRide mobile-menu-about">About</a>
                 <div id="mobile-drop">
                     <p class="mobile-submenu"><a href="static_pages/about" >Flyers Program</a></p>
@@ -55,7 +55,7 @@
                 </div>    
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="static_pages/apply" class="subRide">Apply</a> 
-            <a href="/sign_in" class="subRide">Sign In</a>
+            <a href="/sign_in" class="subRide selected">Sign In</a>
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
          
@@ -73,21 +73,22 @@
             <span id="oc-youth">SIGN - IN</span>
             
         </div>
+        <br>
         <div id="app-youthwidth" class="clearfix">
         <div id="lower-youth">
-            <div id="about-youth" class="home-parag">
-                
+            <div id="applicationheader" style="margin: 0 auto; text-align: center;">
+                <p>Admin sign-in:</p>
                 <%= form_for(:session, url: sign_in_path) do |f| %>
                 <%= f.email_field :email, :placeholder => "Email" %>
                 <%= f.password_field :password, :placeholder => "Password" %>
-                <%= f.submit "Log In", class:"btn-submit" %>
+                <%= f.submit "Log In", class:"button2" %>
 
             <% end %>
                 
                 </div>   
             </div> 
         </div> <!--youthwidth-->
-        
+        <br>
         <div id="partners" class="youth-footer">
            <ul>
 
