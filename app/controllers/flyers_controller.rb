@@ -1,6 +1,6 @@
 class FlyersController < ApplicationController
     
-    before_action :require_flyer, only: [:index,:show,:edit,:update]
+    before_action :require_flyer, only: [:index,:show,:edit,:update,:new]
     
     def index
         
