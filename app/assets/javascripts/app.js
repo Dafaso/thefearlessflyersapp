@@ -54,7 +54,7 @@ $(window).resize(function(){
 
 
 $('.gallery').justifiedGallery({
-    rowHeight : 160,
+    rowHeight : 150,
     lastRow : 'nojustify',
     margins : 5,
     border : 5, 
