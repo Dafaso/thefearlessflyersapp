@@ -78,8 +78,9 @@ $('.gallery').justifiedGallery({
     rel : 'gallery1',
     
     
-}).on('jg.complete', function () {
-    $(this).find('a').baguetteBox({
-       
-    });
 });
+//    .on('jg.complete', function () {
+//    $(this).find('a').baguetteBox({
+//       
+//    });
+//});
