@@ -1,7 +1,130 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fearless Flyers</title>
+        
+        <%= favicon_link_tag 'favicon' %>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
+        
+        <%= stylesheet_link_tag("application.css") %>
+        
+    </head>
+    <body id="body-youth">
+    <header id="header">
+        <div id="header-content">            
 
-<%= form_for(:session, url: sign_in_path) do |f| %>
-    <%= f.email_field :email, :placeholder => "Email" %>
-    <%= f.password_field :password, :placeholder => "Password" %>
-    <%= f.submit "Log In", class:"btn-submit" %>
+            
+            <%= link_to '/' do %>
+                <%= image_tag 'fearless_logo_crop.jpg', id: "logo", alt: 'flyers logo'%>
+            <% end %>
+            
+            
+            <div id="browser-menu-youth" >
+            <a href="/" class="subRide selected">Home</a>
+            <a href="static_pages/about" class="subRide menu-about">About</a>        
+                
+                <nav id="rides-drop">
+                    <ul id="drop-menu">
+                        <p class=" drop-item clearfix"><a href="static_pages/about">Fearless Flyers Program</a></p>
+<!--                        <p class="drop-item clearfix"><a href="static_pages/board.html">Board Of Directors</a></p>-->
+                        <p class="drop-item clearfix"><a href="static_pages/staff">Board / Staff</a></p>
+                        <p class="drop-item clearfix"><a href="static_pages/youth">Youth Rider Profiles</a></p>
+                        <p class="drop-item clearfix"><a href="static_pages/supporters">Supporters</a></p>
+                    </ul>
+                </nav>    
+            <a href="/static_pages/photos" class="subRide">Photos</a>
+            <a href="static_pages/apply" class="subRide">Apply</a>
+            <a href="/sign_in" class="subRide">Sign-In</a>     
+            <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
+   
+            </div>
+        </div>    
+        <div id="mobile_menu">
+            <a href="/" class="subRide selected">Home</a>
+            <a href="static_pages/about.html" class="subRide mobile-menu-about">About</a>
+                <div id="mobile-drop">
+                    <p class="mobile-submenu"><a href="static_pages/about" >Flyers Program</a></p>
+<!--                    <p class="mobile-submenu"><a href="static_pages/board.html">Board Of Directors</a></p>-->
+                    <p class="mobile-submenu"><a href="static_pages/staff">Board / Staff</a></p>
+                    <p class="mobile-submenu"><a href="static_pages/youth">Youth Rider Profiles</a></p>
+                    <p class="mobile-submenu"><a href="static_pages/supporters">Supporters</a></p>
+                </div>    
+            <a href="/static_pages/photos" class="subRide">Photos</a>
+            <a href="static_pages/apply" class="subRide">Apply</a> 
+            <a href="/sign_in" class="subRide">Sign In</a>
+            <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
+        </div>
+         
+        <div id="nav_lines">
+            <p class="hamburger">
+            </p>
+        </div>    
+    </header>
+        <div class="jumbotron-youth">
+            
+            <p id="sunday"></p>
+            
+        </div>
+        <div id="youth-text" >
+            <span id="oc-youth">SIGN - IN</span>
+            
+        </div>
+        <div id="app-youthwidth" class="clearfix">
+        <div id="lower-youth">
+            <div id="about-youth" class="home-parag">
+                
+                <%= form_for(:session, url: sign_in_path) do |f| %>
+                <%= f.email_field :email, :placeholder => "Email" %>
+                <%= f.password_field :password, :placeholder => "Password" %>
+                <%= f.submit "Log In", class:"btn-submit" %>
 
-<% end %>
+            <% end %>
+                
+                </div>   
+            </div> 
+        </div> <!--youthwidth-->
+        
+        <div id="partners" class="youth-footer">
+           <ul>
+
+        <!--<li><%= link_to image_tag('center_logo.png'), "https://gaycenter.org/", target:"_blank" %></li>-->
+               
+            <li><%= link_to image_tag('outcyclinglogo.png'), "http://www.outcycling.org/", target:"_blank" %></li>
+
+        <!--<li><%= link_to image_tag('bike_ny.png'), "http://www.bike.nyc/", target:"_blank" %></li> -->
+                
+
+            </ul>
+            <div id="contact-info">
+                <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
+            </div>
+        </div> 
+        
+        
+      
+        
+     <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
+        
+        <%= javascript_include_tag "app" %>  
+<!--        google analytics below-->
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-81832841-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>        
+        
+    </body>  
+    
+    
+</html>
+
