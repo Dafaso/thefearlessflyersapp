@@ -17,7 +17,7 @@ class FlyersController < ApplicationController
             end
         else
             @riders = Rider.all.order("firstname")        
-        end        
+        end  
         
     end
     
@@ -27,7 +27,7 @@ class FlyersController < ApplicationController
     end
     
     def show
-        @rider = Rider.find(params[:id])
+        @rider = Rider.find(params[:id])        
     end
     
     

@@ -1,10 +1,12 @@
-<p>User Number <%= @rider.id %></p>
+    
+<div>
+    <p>User Number <%= @rider.id %></p>
     <p><strong>Name:</strong> <%= @rider.firstname %> <%= @rider.lastname %></p>
     <p><strong>Email:</strong> <%= @rider.email %></p>
     <p><strong>Birth Date:</strong> <%= @rider.birthdate %></p>
     <p><strong>Phone:</strong> <%= @rider.phone %></p>
-    <p><strong>Address:</strong> <%= @rider.address %>
-    <p><strong>Apt:</strong>   <%= @rider.apt %></p>
+    <p><strong>Address:</strong> <%= @rider.address %> 
+     <strong>Apt:</strong>   <%= @rider.apt %></p>
     <p><strong>City:</strong> <%= @rider.city %> 
     <strong>Zip:</strong> <%= @rider.zip %></p>
     <p><strong>School:</strong> <%= @rider.school %></p>
@@ -23,3 +25,5 @@
 <br>
 <br>
 <%= link_to "Back To Full List", '/flyers',style:"color:gray" %>
+    
+</div>    

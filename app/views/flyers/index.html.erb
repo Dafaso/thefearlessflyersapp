@@ -41,10 +41,19 @@
 <% @riders.each do |x| %>
     <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %><br><br><strong>Email:</strong> <%= x.email %></p>
     <p><strong>Shirt:</strong> <%= x.shirt %></p>
+
+    <strong>Birth: </strong><%= x.birthdate.month %><span>-</span><%= x.birthdate.day %><span>-</span><%= x.birthdate.year %><span> </span> 
+        <% age = (Time.now.year)-(x.birthdate.year)%>
+        <% age-=1 if (Time.now.month)<(x.birthdate.month)||(Time.now.month)==(x.birthdate.month)&&(Time.now.day)<(x.birthdate.day) %>
+     <strong>Age: </strong><%= age %>
+
     <p><strong>Admin Notes:</strong> <%= x.notes %></p>
+
     <%= link_to "More info", rider_path(x), style:"color: gray" %>
     <p>____________________________________</p>
 <% end %>
+
+
 
 
   
