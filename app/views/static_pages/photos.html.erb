@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Fearless Flyers</title>
+        <% content_for :title, "Fearless Flyers" %>
         
         <%= favicon_link_tag 'favicon' %>
         
@@ -147,10 +147,10 @@
         </div> 
         
         <%= javascript_include_tag 'jquery.justifiedGallery.min.js' %>
-           
-        <%= javascript_include_tag 'app' %>
         
         <%= javascript_include_tag 'baguetteBox.min.js' %>
+        
+        <%= javascript_include_tag 'app' %>
         
         <script>
 //            $(document).ready(function(){
