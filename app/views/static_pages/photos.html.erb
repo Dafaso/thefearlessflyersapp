@@ -3,32 +3,32 @@
     <head>
         <meta charset="utf-8">
         <% content_for :title, "Fearless Flyers" %>
-        
+
         <%= favicon_link_tag 'favicon' %>
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
           <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-        
-        
-       
+
+
+
         <%= stylesheet_link_tag 'justifiedGallery.min.css' %>
         <%= stylesheet_link_tag 'baguetteBox.min.css' %>
         <%= stylesheet_link_tag 'application.css' %>
-        
+
     </head>
     <body id="body-youth">
     <header id="header">
         <div id="header-content">
-            
+
             <%= link_to image_tag('fearless_logo_crop.jpg', id: 'logo'),'/' %>
-            
-     
-            
+
+
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide">Home</a>
-            <a href="about" class="subRide menu-about">About</a>        
-                
+            <a href="about" class="subRide menu-about">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="about">Fearless Flyers Program</a></p>
@@ -37,14 +37,14 @@
                         <p class="drop-item clearfix"><a href="youth">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="photos" class="subRide selected">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>     
+            <a href="/sign_in" class="subRide" disabled>Sign-In</a>
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide">Home</a>
             <a href="about.html" class="subRide mobile-menu-about">About</a>
@@ -54,21 +54,21 @@
                     <p class="mobile-submenu"><a href="staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="youth">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="photos" class="subRide selected">Photos</a>
-            <a href="apply" class="subRide">Apply</a> 
+            <a href="apply" class="subRide">Apply</a>
             <a href="/sign_in" class="subRide">Sign In</a>
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
 
-        <div class="gallery"> 
-            
+        <div class="gallery">
+
 <!--            photo thumbs -->
 
             <a href="<%= image_path('diany_victorious.jpg')%>" title="Diany, feeling victorious." ><img src="<%= image_path('diany_victorious_thumb.jpg')%>" alt="Diany, feeling victorious."></a>
@@ -80,90 +80,121 @@
             <a href="<%= image_path('instruction1.jpg')%>" title="Instruction" ><img src="<%= image_path('instruction1_thumb.jpg')%>" alt="Instruction"></a>
 
             <a href="<%= image_path('diany_ride.jpg')%>" title="Diany riding on the GWB." ><img src="<%= image_path('diany_ride_thumb.jpg')%>" alt="Diany riding on the GWB."></a>
-            
+
             <a href="<%= image_path('diany_smile.jpg')%>" title="Happy to be on the road." ><img src="<%= image_path('diany_smile_thumb.jpg')%>" alt="Happy to be on the road."></a>
-            
+
             <a href="<%= image_path('fearless_couple.jpg')%>" title="Fearless couple." ><img src="<%= image_path('fearless_couple_thumb.jpg')%>" alt="Fearless couple."></a>
-            
+
             <a href="<%= image_path('flyer_crew.jpg')%>" title="Having fun in the sun." ><img src="<%= image_path('flyer_crew_thumb.jpg')%>" alt="Having fun in the sun."></a>
-            
+
             <a href="<%= image_path('flyer_friends.jpg')%>" title="Flyer friends." ><img src="<%= image_path('flyer_friends_thumb.jpg')%>" alt="Flyer friends."></a>
-            
+
             <a href="<%= image_path('flyer_group.jpg')%>" title="Flyer group photo." ><img src="<%= image_path('flyer_group_thumb.jpg')%>" alt="Flyer group photo."></a>
-            
+
             <a href="<%= image_path('flyer_lunch_stop.jpg')%>" title="Lunch in the park." ><img src="<%= image_path('flyer_lunch_stop_thumb.jpg')%>" alt="Lunch in the park."></a>
-            
+
             <a href="<%= image_path('flyer_team.jpg')%>" title="Out on the road." ><img src="<%= image_path('flyer_team_thumb.jpg')%>" alt="Out on the road."></a>
-                        
+
             <a href="<%= image_path('flyers_graduation2.jpg')%>" title="Flyers graduation 2015." ><img src="<%= image_path('flyers_graduation2_thumb.jpg')%>" alt="Flyers graduation 2015."></a>
-            
+
             <a href="<%= image_path('flyers_graduation.jpg')%>" title="Fearless Flyers graduation 2016" ><img src="<%= image_path('flyers_graduation_thumb.jpg')%>" alt="Fearless Flyers graduation 2016"></a>
-            
+
             <a href="<%= image_path('four_guys.jpg')%>" title="Flyer friends." ><img src="<%= image_path('four_guys_thumb.jpg')%>" alt="Flyer friends."></a>
-            
+
             <a href="<%= image_path('foursome_group.jpg')%>" title="Fearless foursome." ><img src="<%= image_path('foursome_group_thumb.jpg')%>" alt="Fearless foursome."></a>
-                        
+
             <a href="<%= image_path('flyers_table.jpg')%>" title="Lunch stop." ><img src="<%= image_path('flyers_table_thumb.jpg')%>" alt="Lunch stop."></a>
-                        
+
             <a href="<%= image_path('group_shot_bywater.jpg')%>" title="Group shot on the west side bike path." ><img src="<%= image_path('group_shot_bywater_thumb.jpg')%>" alt="Group shot on the west side bike path."></a>
-             
+
             <a href="<%= image_path('group_shot.jpg')%>" title="Group shot." ><img src="<%= image_path('group_shot_thumb.jpg')%>" alt="Group shot."></a>
-                        
+
             <a href="<%= image_path('happy_group.jpg')%>" title="Happy to be riding." ><img src="<%= image_path('happy_group_thumb.jpg')%>" alt="Happy to be riding."></a>
-            
+
             <a href="<%= image_path('josh_ride.jpg')%>" title="Josh, enjoying the ride." ><img src="<%= image_path('josh_ride_thumb.jpg')%>" alt="Josh, enjoying the ride."></a>
-            
+
             <a href="<%= image_path('leads.jpg')%>" title="Ride leaders." ><img src="<%= image_path('leads_thumb.jpg')%>" alt="Ride leaders."></a>
-            
+
             <a href="<%= image_path('looking_ahead.jpg')%>" title="Looking ahead." ><img src="<%= image_path('looking_ahead_thumb.jpg')%>" alt="Looking ahead."></a>
-            
+
             <a href="<%= image_path('maireni_leo.jpg')%>" title="Maireni & Leo." ><img src="<%= image_path('maireni_leo_thumb.jpg')%>" alt="Maireni & Leo."></a>
-            
+
             <a href="<%= image_path('tiffany_maireni_leo.jpg')%>" title="Tiffany, Maireni & Leo." ><img src="<%= image_path('tiffany_maireni_leo_thumb.jpg')%>" alt="Tiffany, Maireni & Leo."></a>
-            
+
             <a href="<%= image_path('trio.jpg')%>" title="Trio." ><img src="<%= image_path('trio_thumb.jpg')%>" alt="Trio."></a>
-            
+
             <a href="<%= image_path('warm_up.jpg')%>" title="Warming up." ><img src="<%= image_path('warm_up_thumb.jpg')%>" alt="Warming up."></a>
-    
-        
+
+
         </div>
-        
-        
-   
+
+
+
         <div id="partners" class="youth-footer">
            <ul>
 
         <!--<li><%= link_to image_tag('center_logo.png'), "https://gaycenter.org/", target:"_blank" %></li>-->
-               
+
             <li><%= link_to image_tag('outcyclinglogo.png'), "http://www.outcycling.org/", target:"_blank" %></li>
 
         <!--<li><%= link_to image_tag('bike_ny.png'), "http://www.bike.nyc/", target:"_blank" %></li> -->
-                
+
 
             </ul>
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div> 
-        
+        </div>
+
         <%= javascript_include_tag 'jquery.justifiedGallery.min.js' %>
-        
+
         <%= javascript_include_tag 'baguetteBox.min.js' %>
-        
+
         <%= javascript_include_tag 'app' %>
-        
+
         <script>
+
+
+        $(document).ready(function(){
+        $('.gallery').justifiedGallery({
+            rowHeight : 150,
+            lastRow : 'nojustify',
+            margins : 5,
+            border : 5,
+
+
+            sizeRangeSuffixes : {
+                'lt100':'_a',
+                'lt240':'_b',
+                'lt320':'_c',
+                'lt500':'_d',
+                'lt640':'_e',
+                'lt1024':'_f'
+            },
+
+            captionSettings : {
+                animationDuration: 1100,
+                visibleOpacity: 0.9,
+                nonVisibleOpacity: 0.0
+            },
+
+            rel : 'gallery1',
+
+
+        });
+});
+
 //            $(document).ready(function(){
                 baguetteBox.run('.gallery', {
-            
+
                 });
 //            });
-            
+
         </script>
-        
-        
+
+
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -173,10 +204,10 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-        
-    </body>  
-    
-    
+        </script>
+
+
+    </body>
+
+
 </html>

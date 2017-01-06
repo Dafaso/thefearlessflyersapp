@@ -5,21 +5,21 @@
         <% content_for :title, "Fearless Flyers" %>
         <%= favicon_link_tag "favicon" %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-      
+
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
         <%= stylesheet_link_tag("application.css") %>
-        
+
     </head>
     <body id="body-youth">
     <header id="header">
         <div id="header-content">
-            
+
             <%= link_to image_tag('fearless_logo_crop.jpg', id:'logo'),'/' %>
-            
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide">Home</a>
-            <a href="about" class="subRide menu-about">About</a>        
-                
+            <a href="about" class="subRide menu-about">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="/static_pages/about">Fearless Flyers Program</a></p>
@@ -28,14 +28,14 @@
                         <p class="drop-item clearfix"><a href="/static_pages/youth">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="/static_pages/supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="../static_pages/apply" class="subRide selected">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>     
+            <a href="/sign_in" class="subRide" disabled>Sign-In</a>
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide">Home</a>
             <a href="about.html" class="subRide mobile-menu-about">About</a>
@@ -45,62 +45,62 @@
                     <p class="mobile-submenu"><a href="/static_pages/staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="/static_pages/youth">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="/static_pages/supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="/static_pages/photos" class="subRide">Photos</a>
-            <a href="/static_pages/apply" class="subRide selected">Apply</a> 
+            <a href="/static_pages/apply" class="subRide selected">Apply</a>
             <a href="/sign_in" class="subRide">Sign In</a>
             <a target="_blank" href="https://flyers2016.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
-         
-        
-        
+
+
+
         <div id="app-youthwidth">
-       
+
         <div id="lower-apply">
             <div id="applicationheader">
-                
+
                 <%= image_tag 'flyershead.png',id: "flyershead" %>
-    
+
                     <h1>2017 APPLICATION</h1>
-                <h5>Accepting applications beginning Jan 2017.</h5>
+                
                 <p style="color:red"> <%= @rider.errors.full_messages if @rider.errors.any? %> </p>
                 <%= form_for(@rider) do |f| %>
     <div class="field">
-        <%= f.label :firstname,"First Name:" %> 
+        <%= f.label :firstname,"First Name:" %>
         <%= text_field(:rider, :firstname, style:"width: 250px") %><br><br>
-        <%= f.label :lastname, "Last Name" %> 
+        <%= f.label :lastname, "Last Name" %>
         <%= text_field(:rider, :lastname, style:"width: 250px") %><br><br>
         <%= f.label :birthdate, "Birth Date" %>
         <%= date_field(:rider, :birthdate) %><br><br>
-        <%= f.label :email %> 
+        <%= f.label :email %>
         <%= email_field(:rider, :email, style:"width: 250px") %><br><br>
-        <%= f.label :phone %> 
+        <%= f.label :phone %>
         <%= text_field(:rider, :phone) %><br><br>
-        <%= f.label :address %> 
+        <%= f.label :address %>
         <%= text_field(:rider, :address, style:"width: 233px") %>
-        <%= f.label :apt %> 
+        <%= f.label :apt %>
         <%= text_field(:rider, :apt, style:"width: 100px") %><br><br>
-        <%= f.label :city %> 
+        <%= f.label :city %>
         <%= text_field(:rider, :city, style:"width: 250px") %><br>
-        <%= f.label :zip %> 
+        <%= f.label :zip %>
         <%= text_field(:rider, :zip, style:"width: 100px") %><br><br>
-        <%= f.label :school %> 
+        <%= f.label :school %>
         <%= text_field(:rider, :school) %><br><br>
-        <%= f.label :feet, "Height: Feet" %> 
+        <%= f.label :feet, "Height: Feet" %>
         <%= number_field(:rider, :feet, in: 4..6) %>
-        <%= f.label :inches %> 
+        <%= f.label :inches %>
         <%= number_field(:rider, :inches, in: 0..11) %><br><br>
         <%= f.label :shirt_size, "T-shirt size" %>
         <%= f.radio_button(:shirt, "S") %>
             <%= label_tag(:shirt, "Small") %>
         <%= f.radio_button(:shirt, "M") %>
-            <%= label_tag(:shirt, "Medium") %> 
+            <%= label_tag(:shirt, "Medium") %>
         <%= f.radio_button(:shirt, "L") %>
             <%= label_tag(:shirt, "Large") %>
         <%= f.radio_button(:shirt, "XL") %>
@@ -110,7 +110,7 @@
             <%= label_tag(:ridebike, "Yes, I Can Ride.") %>
         <%= f.radio_button(:ridebike, "No") %>
             <%= label_tag(:ridebike, "No, I Can't Ride.") %><br><br>
-        
+
         <%= f.label :physical, "Do you currently take part in physical activities?" %> <br>
         <%= f.radio_button(:physical, "Yes") %>
             <%= label_tag(:physical, "Yes") %>
@@ -127,36 +127,36 @@
         <%= text_area(:rider, :athexp) %><br><br>
         <%= f.label :goal, "Please describe one personal goal in joining the Fearless Flyers:" %> <br>
         <%= text_area(:rider, :goal) %><br><br>
-            
+
         <br> <br>
-<!--        <%= f.submit "Submit", class:"button2" %>-->
+       <%= f.submit "Submit", class:"button2" %>
     </div>
 <% end %>
-                
-        </div>   
-        </div> 
+
+        </div>
+        </div>
         </div> <!--youthwidth-->
          <div id="partners" class="youth-footer">
            <ul>
 
         <!--<li><%= link_to image_tag('center_logo.png'), "https://gaycenter.org/", target:"_blank" %></li>-->
-               
+
             <li><%= link_to image_tag('outcyclinglogo.png'), "http://www.outcycling.org/", target:"_blank" %></li>
 
         <!--<li><%= link_to image_tag('bike_ny.png'), "http://www.bike.nyc/", target:"_blank" %></li> -->
-                
+
 
             </ul>
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div>    
-        
+        </div>
+
      <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
         <%= javascript_include_tag "app" %>
-        
+
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -166,14 +166,10 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-        
-    </body>  
-    
-    
+        </script>
+
+
+    </body>
+
+
 </html>
-
-
-
-
