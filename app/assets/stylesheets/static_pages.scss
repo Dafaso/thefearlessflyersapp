@@ -420,7 +420,28 @@ HOME/ABOUT PAGE
 
 #grad1 {
     float: left;
-    margin: 0 0 14px 0;
+    margin: 14px 0;
+}
+
+.global_video {
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.global_video iframe {
+    position: absolute;
+	top: 0;
+	left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+	width: 98%;
+	height: 98%;
+    max-width:970px;
+    max-height:556px;
+    border: 2px solid rgba(44,44,44,.8);
 }
 
 #youth-grads img {
