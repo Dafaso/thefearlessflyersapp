@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     
-  get '/riders/new' => 'riders#new'
+#  get '/riders/new' => 'riders#new'
   post '/riders' => 'riders#create'    
     
     
