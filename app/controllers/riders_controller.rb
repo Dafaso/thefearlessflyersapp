@@ -5,12 +5,14 @@ class RidersController < ApplicationController
     end
 
     def create
-       @rider = Rider.new(rider_params)
+      @rider = Rider.new(rider_params)
         if @rider.save
 
-            redirect_to '/static_pages/thanks'
+          RiderMailer.signup(@rider).deliver
+
+          redirect_to '/static_pages/thanks'
         else
-            render :new
+          render :new
         end
     end
 
