@@ -1,30 +1,16 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
-        
-        <%= favicon_link_tag 'favicon' %>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-        
-        <%= stylesheet_link_tag 'application.css' %>
-        
-    </head>
     <body id="body-youth" >
     <header id="header">
         <div id="header-content">
-            
+
             <%= link_to '/' do %>
                 <%= image_tag 'fearless_logo_crop.jpg', id: "logo", alt: 'flyers logo' %>
             <% end %>
-            
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide">Home</a>
-            <a href="about.html" class="subRide menu-about selected">About</a>        
-                
+            <a href="about.html" class="subRide menu-about selected">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="about" >Fearless Flyers Program</a></p>
@@ -33,14 +19,14 @@
                         <p class="drop-item clearfix"><a href="youth" class="selected">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="photos" class="subRide">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>     
+
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide">Home</a>
             <a href="about.html" class="subRide mobile-menu-about selected">About</a>
@@ -50,110 +36,109 @@
                     <p class="mobile-submenu"><a href="staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="youth" class="selected">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="photos" class="subRide">Photos</a>
-            <a href="apply" class="subRide">Apply</a> 
-            <a href="/sign_in" class="subRide">Sign In</a>
+            <a href="apply" class="subRide">Apply</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
      <div id="profiles-width" class="clearfix">
 
             <div id="profiles-youth" class="clearfix">
-                
-               
+
+
                 <div id="profile" class="clearfix">
                     <h3>DIANY DISLA</h3>
-                    
+
                     <%= image_tag 'diany.jpg', alt: 'diany d' %>
-                        
+
                     <p>The Fearless Flyers experience has completely changed my life. I lost a lot of weight, gained more confidence, built community and witnessed what it’s done for other youth. I will be with this program for a long time.</p>
-                    
-                </div>  
+
+                </div>
                 <div id="profile" class="clearfix">
                     <h3>GABBY RAMALHO</h3>
-                    
+
                     <%= image_tag 'gabby.jpg', alt: 'gabby r' %>
-                    
+
                     <p>Being a member of the Fearless Flyers program helped me overcome my fears. The team builds a sense of spirit and community, and introduced me to relationships that will impact my life forever. The experience expanded my comfort zone and enabled me to go out in the world and try new things.</p>
-                </div>    
-                <div id="profile" class="clearfix">    
+                </div>
+                <div id="profile" class="clearfix">
                     <h3>MAIRENI SORIANO</h3>
-                    
+
                     <%= image_tag 'maireni.jpg', alt: 'maireni s' %>
-                    
+
                     <p>Being a ride lead and giving the next class of participants their graduation certificates created a strong bond and connection with the next generation of Fearless Flyers.</p>
                 </div>
                 <div id="profile" class="clearfix">
                     <h3>JASLEEN VILLAMIL</h3>
-                    
+
                     <%= image_tag 'jasleen.jpg', alt: 'jasleen v' %>
-                    
-                    <p>The first time I rode to the Little Red Lighthouse under the George Washington Bridge, I wondered how I had come so far — I felt imense gratitude that I made it to the bridge.</p> 
-                </div>  
+
+                    <p>The first time I rode to the Little Red Lighthouse under the George Washington Bridge, I wondered how I had come so far — I felt imense gratitude that I made it to the bridge.</p>
+                </div>
                 <div id="profile" class="clearfix">
                     <h3>JOSH TEREFE</h3>
-                    
+
                     <%= image_tag 'josh.jpg', alt: 'josh t' %>
-                    
-                    <p>I’m excited about my second year with Fearless Flyers — riding this year was so much easier since I’ve become more fit. OutCycling feels like a family and I’m psyched to ride with a group of queer youth who are active.</p> 
+
+                    <p>I’m excited about my second year with Fearless Flyers — riding this year was so much easier since I’ve become more fit. OutCycling feels like a family and I’m psyched to ride with a group of queer youth who are active.</p>
                 </div>
                 <div id="profile" class="clearfix">
                     <h3>LEONARDO CANELA</h3>
-                    
+
                     <%= image_tag 'leo.jpg', alt:'leo c' %>
-                    
-                    <p>Fearless Flyers taught me I can prevail through anything and it has showed me to never give up because everything just gets better. I learned how to become more of an outspoken leader; to be more outgoing and to always be fearless.</p> 
+
+                    <p>Fearless Flyers taught me I can prevail through anything and it has showed me to never give up because everything just gets better. I learned how to become more of an outspoken leader; to be more outgoing and to always be fearless.</p>
                 </div>
-            
+
             </div>    <!--profiles-youth-->
-            
-            
-            
+
+
+
 <!--        </div>-->
-        <div id="profile-videos-outer"> 
+        <div id="profile-videos-outer">
             <h2>Hear from the Youth Ride Leads in their own words:</h2>
-            
+
             <div id="profile-videos" class="clearfix">
               <h3>Diany D.</h3>
                 <div class="video-wrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/D2rLftKXm2s?rel=0" frameborder="0" allowfullscreen></iframe>
-                </div>  
-  
+                </div>
+
             </div> <!--profile videos-->
             <div id="profile-videos" class="clearfix">
               <h3>Maireni S.</h3>
                 <div class="video-wrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/YnM6mnBAZe8?rel=0" frameborder="0" allowfullscreen></iframe>
-                </div>    
-                
+                </div>
+
             </div> <!--profile videos-->
             <div id="profile-videos" class="clearfix">
               <h3>Jasleen V.</h3>
                 <div class="video-wrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/KRtOs65p40s?rel=0" frameborder="0" allowfullscreen></iframe>
-                </div>  
-    
+                </div>
+
             </div> <!--profile videos-->
 <!--
             <div id="profile-videos" class="clearfix">
               <h3>Gabby R.</h3>
                 <div class="video-wrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/D2rLftKXm2s" frameborder="0" allowfullscreen></iframe>
-                </div>  
-   
+                </div>
+
             </div> profile videos
 -->
-        </div>    
- 
+        </div>
+
         </div> <!--profileswidth (entire main area of page)-->
-        
-        
+
+
         <div id="partners" class="youth-footer">
            <ul>
 
@@ -167,16 +152,16 @@
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div>    
-        
-        
-        
+        </div>
+
+
+
      <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
-        
+
         <%= javascript_include_tag 'app' %>
-        
+
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -186,9 +171,6 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-    </body>  
-    
-    
-</html>
+        </script>
+
+    </body>

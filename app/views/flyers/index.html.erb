@@ -1,25 +1,25 @@
-<br> 
+<br>
 <% if current_flyer %>
     <span>Logged In: </span>
     <span><%= current_flyer.email %></span>
     <br>
-    <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>  
+    <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>
 <% end %>
 <br>
 
 
 <%= form_tag(flyers_path, method: "get", id: "search-form") do %>
     <span>Search:</span><br>
-    <span>First Name:</span>
-    <%= text_field_tag :search, params[:search] %><br>
+    <span>Name:</span>
+    <span><%= text_field_tag :search, params[:search], style:"width: 200px;" %></span><br>
         <span>Shirt Size:</span>
-        <%= radio_button_tag :shirt, "S" %>
+        <%= radio_button_tag :shirt, "S", params[:shirt] == "S" %>
             <%= label_tag(:shirt, "Small") %>
-        <%= radio_button_tag :shirt, "M" %>
-            <%= label_tag(:shirt, "Medium") %> 
-        <%= radio_button_tag :shirt, "L" %>
+        <%= radio_button_tag :shirt, "M", params[:shirt] == "M" %>
+            <%= label_tag(:shirt, "Medium") %>
+        <%= radio_button_tag :shirt, "L", params[:shirt] == "L" %>
             <%= label_tag(:shirt, "Large") %>
-        <%= radio_button_tag :shirt, "XL" %>
+        <%= radio_button_tag :shirt, "XL", params[:shirt] == "XL" %>
             <%= label_tag(:shirt, "X-Large") %><br><br>
     <%= submit_tag "Search" %>
 <% end %>
@@ -33,27 +33,36 @@
 
 
 <% if @riders.blank? %>
-  <h4>No riders found with Name: <%= params[:search] %> and Shirt: <%= params[:shirt] %>.</h4>
+  <h4>No riders found.</h4>
 <% end %>
 
+<table id="rider_list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Shirt</th>
+        <th>Birth</th>
+        <th>Age</th>
+        <th>Notes</th>
+        <th>Info</th>
+      </tr>
+    </thead>
 
+    <tbody>
+      <% @riders.each do |x| %>
 
-<% @riders.each do |x| %>
-    <p><strong>Name:</strong> <%= x.firstname %> <%= x.lastname %><br><br><strong>Email:</strong> <%= x.email %></p>
-    <p><strong>Shirt:</strong> <%= x.shirt %></p>
+      <tr>
+        <td><%= x.firstname %> <%= x.lastname %></td>
+        <td><%= x.email %></td>
+        <td><%= x.shirt %></td>
+        <td><%= x.birthdate.month %><span>-</span><%= x.birthdate.day %><span>-</span><%= x.birthdate.year %></td>
+        <td><% age = (Time.now.year)-(x.birthdate.year)%>
+        <% age-=1 if (Time.now.month)<(x.birthdate.month)||(Time.now.month)==(x.birthdate.month)&&(Time.now.day)<(x.birthdate.day) %><%= age %></td>
+        <td><%= x.notes %></td>
+        <td><%= link_to "More info", rider_path(x), style:"color: gray" %></td>
 
-    <strong>Birth: </strong><%= x.birthdate.month %><span>-</span><%= x.birthdate.day %><span>-</span><%= x.birthdate.year %><span> </span> 
-        <% age = (Time.now.year)-(x.birthdate.year)%>
-        <% age-=1 if (Time.now.month)<(x.birthdate.month)||(Time.now.month)==(x.birthdate.month)&&(Time.now.day)<(x.birthdate.day) %>
-     <strong>Age: </strong><%= age %>
-
-    <p><strong>Admin Notes:</strong> <%= x.notes %></p>
-
-    <%= link_to "More info", rider_path(x), style:"color: gray" %>
-    <p>____________________________________</p>
-<% end %>
-
-
-
-
-  
+      </tr>
+    <% end %>
+  </tbody>
+</table>

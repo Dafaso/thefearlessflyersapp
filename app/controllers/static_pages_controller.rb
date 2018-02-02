@@ -22,8 +22,11 @@ class StaticPagesController < ApplicationController
 
   def apply
   end
-    
+
   def thanks
   end
-    
+
+  def waiver
+  end 
+
 end

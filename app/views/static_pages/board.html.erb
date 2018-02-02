@@ -1,32 +1,18 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
-        
-        <%= favicon_link_tag 'favicon' %>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-        
-        <%= stylesheet_link_tag 'application.css' %>
-        
-    </head>
     <body id="body-youth" >
     <header id="header">
         <div id="header-content">
-            
-            
+
+
             <%= link_to '/' do %>
                 <% image_tag 'fearless_logo_crop.jpg', id: "logo", alt: 'flyers logo' %>
             <% end %>
-            
-            
+
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide selected">Home</a>
-            <a href="about" class="subRide menu-about">About</a>        
-                
+            <a href="about" class="subRide menu-about">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="about">Fearless Flyers Program</a></p>
@@ -35,14 +21,14 @@
                         <p class="drop-item clearfix"><a href="youth">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="photos" class="subRide">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>     
+
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide selected">Home</a>
             <a href="about.html" class="subRide mobile-menu-about">About</a>
@@ -52,26 +38,25 @@
                     <p class="mobile-submenu"><a href="staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="youth">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="photos" class="subRide">Photos</a>
-            <a href="apply" class="subRide">Apply</a> 
-            <a href="/sign_in" class="subRide">Sign In</a>
+            <a href="apply" class="subRide">Apply</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
-    <div id="main-content" > 
-        <div class="profile clearfix">    
+    <div id="main-content" >
+        <div class="profile clearfix">
             <div class="photo-container">
-                
+
                 <%= image_tag 'graham', class:'profile-photo', alt: 'graham w' %>
-                
-                
-            </div>    
+
+
+            </div>
             <div class="profile-info">
                 <p class="profile-name">Graham Weinstein</p>
                 <p class="profile-title">Founder and Executive Director</p>
@@ -85,13 +70,13 @@
                 <br><br>
                 As a former communications manager for New York Road Runners, Graham worked ten NYC Marathons showing him the awesome power of bringing people together to push themselves and achieve a collective goal.  Graham lives in New York City with his partner and 4 bikes! </p>
             </div>
-        </div>       
-        <div class="profile  clearfix">    
+        </div>
+        <div class="profile  clearfix">
             <div class="photo-container">
-                
+
                 <%= image_tag 'rafa', alt: "rafael herrera-lasso", class:"profile-photo" %>
-                
-            </div>    
+
+            </div>
             <div class="profile-info">
                 <p class="profile-name">Rafael Herrera-Lasso</p>
                 <p class="profile-title">Board Chair, OutCycling</p>
@@ -99,20 +84,20 @@
                     <br><br>
                 A cycling enthusiast for many years, Rafael was in instrumental in creating and launching the NYC Pride Ride, a community-wide event that brings together cyclists from across the region in celebration of our diversity. </p>
             </div>
-        </div>    
-        <div class="profile clearfix">    
+        </div>
+        <div class="profile clearfix">
             <div class="photo-container">
-                
+
                 <%= image_tag 'andre', alt:"andre knights", class: "profile-photo" %>
-                
-            </div>    
+
+            </div>
             <div class="profile-info">
                 <p class="profile-name">Andre Knights</p>
                 <p class="profile-title">Program Manager, Fearless Flyers</p>
                 <p class="profile-desc">An Educator in New York City High Schools, Andre has over 10 years experience in inner-city youth development and education. He is an experienced cyclist and knows first hand the health benefits derived from the sport. Andre is excited to blend his proficiency in youth development programs and passion for urban cycling into a program which help address the challenges youth face: higher risks of violence, suicide and substance abuse — often related to lower self-esteem and societal discrimination. The Fearless Flyers harness the power inherent in each participant to overcome their challenges one mile at a time. </p>
             </div>
-            
-        </div> 
+
+        </div>
 
     </div>
         <div id="partners" class="youth-footer">
@@ -123,22 +108,22 @@
                <%= logos %>
 
             </ul>
-                
+
 
             </ul>
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div>    
-        
-        
-        
+        </div>
+
+
+
      <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
-        
+
         <%= javascript_include_tag 'app' %>
-        
+
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -148,9 +133,6 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-    </body>  
-    
-    
-</html>
+        </script>
+
+    </body>

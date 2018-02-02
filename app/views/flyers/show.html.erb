@@ -1,13 +1,13 @@
-    
+
 <div>
-    <p>User Number <%= @rider.id %></p>
+
     <p><strong>Name:</strong> <%= @rider.firstname %> <%= @rider.lastname %></p>
     <p><strong>Email:</strong> <%= @rider.email %></p>
     <p><strong>Birth Date:</strong> <%= @rider.birthdate %></p>
     <p><strong>Phone:</strong> <%= @rider.phone %></p>
-    <p><strong>Address:</strong> <%= @rider.address %> 
+    <p><strong>Address:</strong> <%= @rider.address %>
      <strong>Apt:</strong>   <%= @rider.apt %></p>
-    <p><strong>City:</strong> <%= @rider.city %> 
+    <p><strong>City:</strong> <%= @rider.city %>
     <strong>Zip:</strong> <%= @rider.zip %></p>
     <p><strong>School:</strong> <%= @rider.school %></p>
     <p><strong>Height:</strong> <%= @rider.feet %> <%= @rider.inches %></p>
@@ -20,10 +20,10 @@
     <p><strong>Athletic Experience:</strong> <%= @rider.athexp %></p>
     <p><strong>Goal:</strong> <%= @rider.goal %></p>
     <p><strong>Admin Notes:</strong> <%= @rider.notes %></p>
-    
+
 <%= link_to "Edit Rider", edit_rider_path(@rider), style:"color:gray" %>
 <br>
 <br>
 <%= link_to "Back To Full List", '/flyers',style:"color:gray" %>
-    
-</div>    
+
+</div>

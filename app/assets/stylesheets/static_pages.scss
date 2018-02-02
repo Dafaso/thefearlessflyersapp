@@ -73,12 +73,12 @@ HOME PAGE
     z-index: 1000;
 }
 
-.hamburger {   
+.hamburger {
     position: absolute;
-    right: 12px; 
-    bottom: 17px;    
+    right: 12px;
+    bottom: 17px;
     border-top: 4px rgb(222,222,222) solid;
-    box-shadow: 
+    box-shadow:
     0 11px 0 0 rgb(222,222,222),
     0 22px 0 0 rgb(222,222,222);
     width: 26px;
@@ -88,7 +88,7 @@ HOME PAGE
 
 .hamburger_toggle {
     border-top: 4px rgba(0,161,217,1) solid;
-    box-shadow: 
+    box-shadow:
     0 11px 0 0 rgba(0,161,217,1),
     0 22px 0 0 rgba(0,161,217,1);
 /********************3 lines menu*/
@@ -135,7 +135,7 @@ HOME PAGE
 
 #mobile-drop {
      color: white;
-     display: none;   
+     display: none;
 }
 
 #mobile_menu a.selected{
@@ -169,7 +169,7 @@ HOME PAGE
 .buttonx a {
     padding-top: 2px;
     color: white;
-    display: block; 
+    display: block;
     transition: all, 500ms;
 }
 
@@ -211,12 +211,13 @@ HOME PAGE
     background-color: rgba(0,0,0,.7);
     display: block;
     transition: all, 500ms;
+    cursor: pointer;
 }
 
 .button2 a {
     padding-top: 2px;
     color: white;
-    display: block; 
+    display: block;
     transition: all, 500ms;
 }
 
@@ -237,7 +238,7 @@ h5{
 
 #partners {
     background-color: rgba(30,30,30,1);
-    padding: 1px 0 1px; 
+    padding: 1px 0 1px;
 }
 
 #partners ul li {
@@ -251,7 +252,7 @@ h5{
 }
 
 #partners ul img {
-    height: 55px;  
+    height: 55px;
 }
 
 #contact-info {
@@ -297,7 +298,7 @@ HOME/ABOUT PAGE
     text-align: center;
     position: relative;
     width: 100%;
-    margin-top: 85px;   
+    margin-top: 85px;
 }
 
 .jumbotron-about{
@@ -309,7 +310,7 @@ HOME/ABOUT PAGE
     color: white;
     position: relative;
     width: 100%;
-    margin-top: 85px;   
+    margin-top: 85px;
 }
 
 #youth-text {
@@ -323,7 +324,7 @@ HOME/ABOUT PAGE
     width: 98%;
     margin: 0 auto;
     font-size: 1.1rem;
-    
+
 }
 
 #home-parag p:first-child{
@@ -348,7 +349,7 @@ HOME/ABOUT PAGE
     width: 100%;
     position:relative;
 }
-  
+
 #inset {
     position: absolute;
     bottom: 8px;
@@ -415,7 +416,7 @@ HOME/ABOUT PAGE
 #youth-grads {
     background: white;
     padding: 15px 5px 0;
-    margin: 10px auto 0; 
+    margin: 10px auto 0;
 }
 
 #grad1 {
@@ -473,7 +474,7 @@ HOME/ABOUT PAGE
 #risks{
     padding: 5px 15px 1px 0;
     margin: 0 auto 10px;
-    background: #efefef; 
+    background: #efefef;
 }
 
 #risks h3{
@@ -494,7 +495,7 @@ HOME/ABOUT PAGE
 
 #diany-photos h3{
     color: rgba(10,151,255,1);
-    
+
 }
 
 #diany-photos img{
@@ -504,7 +505,7 @@ HOME/ABOUT PAGE
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;    
+	height: 0;
 }
 
 .video-wrapper iframe {
@@ -666,7 +667,7 @@ YOUTH PROFILES PAGE
 #profile{
     padding: 5px 15px 1px 0;
     margin: 0 auto 10px;
-    background: #efefef; 
+    background: #efefef;
 }
 #profile img {
     width: 30%;
@@ -693,13 +694,14 @@ YOUTH PROFILES PAGE
 }
 
 #profile-videos{
-    
+
 }
 
 
 /***********************************************
 APPLY PAGE
 ************************************************/
+
 
 #app-youthwidth {
     width: 90%;
@@ -759,10 +761,23 @@ APPLY PAGE
 APPLICATION PAGE
 ************************************************/
 
+.field {
+  margin-bottom: 17px;
+}
+
+.field span {
+  display: inline-block;
+  // vertical-align: bottom;
+}
+
+.error_msg {
+  color: red;
+  margin-left: 10px;
+}
 
 #lower-apply {
     margin: 119px 0 20px;
-    
+
 }
 
 #applicationheader {
@@ -793,9 +808,34 @@ label,input,select {
     margin: 20px 0 0 10px;
 }
 
+label[for="rider_feet"], label[for="rider_inches"] {
+  margin-left: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 25px;
+  border: 1px solid rgb(166,166,166);
+  padding-left: 5px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+input[type="radio"]{
+  height: 14px;
+}
+
 textarea {
     margin: 5px 0 15px 10px;
     width: 310px;
+    height: 100px;
+    font-size: 1rem;
 }
 
 #flyersubmit {
@@ -852,21 +892,21 @@ Clearfix
 }
 
 @media (max-height: 470px){
-    
+
     #main-text {
         top: 40%;
     }
-    
-       
+
+
     #sunday {
-    padding-top: 150px;        
+    padding-top: 150px;
     }
-    
-       
+
+
     #mobile_menu {
         height: 120%;
     }
-    
+
     #mobile_menu a {
         padding: 3px 0 3px;
     }
@@ -876,51 +916,51 @@ Clearfix
 
 @media (min-width: 770px){
 
-    
+
 /***********************************************
 STAFF PAGE RESPONSIVE
 ************************************************/
-    
+
     #main-content {
         width: 95%;
         max-width: 1500px;
         margin: 111px auto 0;
     }
-    
+
     .profile {
         margin: 0 auto 20px;
         max-width: 1100px;
-        display: block; 
+        display: block;
         text-align: center;
     }
-    
+
     .profile-photo{
         height: 190px;
     }
-    
-    .photo-container { 
+
+    .photo-container {
         float: left;
         display: inline-block;
         margin-top: 10px;
         margin-right: 8px;
         padding-left: 40px;
         width: 249px;
-       
+
     }
-    
+
     .profile-info {
         float: left;
         width: 62%;
         display: inline-block;
         margin: 3px 0 0 0;
     }
-    
+
     .profile-name, .profile-title {
         text-align: left;
     }
-    
-    
-    
+
+
+
 /***********************************************
 YOUTH PROFILES PAGE
 ************************************************/
@@ -937,7 +977,7 @@ YOUTH PROFILES PAGE
     #profile{
         padding: 4px 15px 1px 15px;
     }
-    
+
     #profile img {
     }
 
@@ -959,70 +999,70 @@ YOUTH PROFILES PAGE
         padding: 4px;
     }
 
-    
-    
-    
+
+
+
 /***********************************************
 SUPPORTERS PAGE RESPONSIVE
 ************************************************/
-    
+
     #supporters-page{
         padding: 0 10px 0;
     }
-    
+
     #supporters-youth-photo{
         float: left;
         width: 60%;
     }
-    
+
     #about-youth-supporters-page{
         float: right;
         width: 40%;
-        padding: 10px 0;    
+        padding: 10px 0;
     }
-    
+
     .supporters{
         width: 90%;
         padding: 20px 0 0 30px;
     }
-    
+
     #supporters-names h2{
         font-size: 1.4rem;
         margin: 0;
     }
-    
+
     #supporters-names h3{
         font-size: 1.0rem;
         margin: 1px 0 5px;
     }
-    
+
     #supporters-names li{
         font-size: .9rem;
     }
-    
+
     .supporters-footer{
         display: block;
     }
-    
-    
-    
-    
-   
+
+
+
+
+
 /***********************************************
     FOOTER
 ************************************************/
 
-    
+
     #partners {
     background-color: rgba(30,30,30,1);
-    padding: 1px 0 1px; 
+    padding: 1px 0 1px;
     clear: both;
     }
-    
+
     #partners ul {
         padding-right: 40px;
     }
-    
+
     #partners ul li {
         margin: 0 20px;
         display: inline-block;
@@ -1031,12 +1071,12 @@ SUPPORTERS PAGE RESPONSIVE
     #partners ul img {
         height: 70px;
     }
-    
+
     #partners a li img[src*="OCLogo"] {
         height: 40px;
         margin-bottom: 11px;
     }
-    
+
 }
 
 
@@ -1045,47 +1085,47 @@ SUPPORTERS PAGE RESPONSIVE
 ************************************************/
 
 /*@media only screen and (min-width: 1030px){
-       
+
 }*/
 
 @media (min-width: 1030px) {
-    
-    
-        
+
+
+
      #browser-menu-youth {
         display: inline-block;
         float: right;
         font-size: 19px;
         margin-bottom: 0px;
-        margin-right:10px ; 
+        margin-right:10px ;
         line-height: 96px;
         width: 523px;
         position: relative;
     }
-    
+
     .menu-about {
-        
+
     }
-    
+
     #browser-menu-youth a {
         margin-right: 28px;
         float: left;
     }
-    
+
     #browser-menu-youth a:last-child {
         margin-right: 20px;
     }
-    
+
     #drop-menu{
         position: absolute;
         top: 94px;
-        right: 231px; 
+        right: 231px;
         padding: 0;
         margin: 0;
         border: 2px solid black;
         display: none;
     }
-    
+
     .drop-item {
         line-height:31px;
         margin: 0;
@@ -1093,93 +1133,93 @@ SUPPORTERS PAGE RESPONSIVE
         width: 210px;
         background: rgba(30,30,30,1);
     }
-    
+
     .drop-item a{
         width: 210px;
         text-align: left;
         padding-left: 4px;
         font-size: 1.1rem;
-        
+
     }
-    
+
     .drop-item .selected{
         background: rgba(30,30,30,1);
     }
-    
+
     .drop-item:not(:last-child){
         border-bottom: 2px solid black;
     }
-    
+
 /*
     .drop-item:hover{
         background: white;
     }
 */
-    
+
     #drop-menu:hover {
         color: rgba(0,161,217,1);
     }
-    
+
     .jumbotron-youth {
     height: 465px;
-    margin-top: 102px;   
+    margin-top: 102px;
     }
-    
+
     .jumbotron-about {
     height: 465px;
-    margin-top: 102px;   
+    margin-top: 102px;
     }
-    
+
     #home-parag,
     #about-youth,
     #supporters-thanks{
         font-size: 1rem;
     }
-    
+
     .fearless-flyers-program {
         font-size: 1.2rem;
     }
-    
+
     .gallery{
         margin: 115px 0 12px;
     }
-    
+
     .photo-slider img{
-        margin: 10px auto 10px; 
+        margin: 10px auto 10px;
         height: 80%;
         width: 80%;
     }
-    
+
     .slick-prev:before, .slick-next:before{
     display: block;
     }
-    
+
     #header {
         height: 103px;
     }
-   
+
     #header-content {
         margin: 0 auto;
         max-width: 1500px;
         height: 100px;
     }
-    
-    
+
+
     #logo {
         height: 63px;
     }
-  
-    #mobile_menu, 
+
+    #mobile_menu,
     #nav_lines,
     .hamburger {
         display:none;
     }
-    
-    
+
+
     .buttonx {
         bottom: 45px;
     }
-    
+
     #photo1,
     #photo2,
     #photo3 {
@@ -1188,7 +1228,7 @@ SUPPORTERS PAGE RESPONSIVE
         margin: 1.5%;
         display: inline-block;
     }
-    
+
     #photo1 p:not(.header),
     #photo2 p:not(.header),
     #photo3 p:not(.header),
@@ -1196,31 +1236,31 @@ SUPPORTERS PAGE RESPONSIVE
         text-align: left;
         line-height: 20px;
     }
-    
+
     #logos {
         margin-top: 0;
-        padding-bottom: 10px; 
+        padding-bottom: 10px;
         height: 100px;
     }
-    
+
     #logo {
         margin-left: 4%;
     }
-    
+
     #youthwidth {
         max-width: 1400px;
         margin: 0px auto;
         padding-right: 5px;
         background: none;
     }
-    
+
     #app-youthwidth {
         max-width: 1400px;
         margin: 0 auto;
         padding-right: 5px;
         background: none;
     }
-    
+
     #about-youth{
         float: left;
         width: 60%;
@@ -1228,32 +1268,32 @@ SUPPORTERS PAGE RESPONSIVE
         margin-bottom: 0px;
         background:#efefef;
     }
-    
-    #risks {    
+
+    #risks {
         padding-left: 13px;
     }
-    
+
     #diany-photos h3{
     font-size: 1.3rem;
     }
-    
+
     #about-youth-supporters{
         float: right;
         width: 40%;
-        padding: 10px 0;        
+        padding: 10px 0;
         margin-top: -10px;
     }
-    
+
     #about-supporters{
         padding-right: 0;
     }
-    
+
     #youth-grads {  /*home page*/
         float: left;
         width: 38%;
         padding: 20px 0 0 30px;
     }
-    
+
     #donation{
         margin-top: 20px;
     }
@@ -1263,112 +1303,112 @@ SUPPORTERS PAGE RESPONSIVE
         margin:0;
         width: 97%;
     }
-    
+
     #long-range-goal p {
         padding: 5px;
     }
-        
+
     textarea {
     width: 620px;
     }
-    
+
     #flyersubmit {
         margin-left: 220px;
     }
-    
+
     #partners ul li {
         margin: 0 40px;
     }
-    
+
     .youth-footer {
         clear: both;
     }
-    
+
 /***********************************************
 STAFF PAGE RESPONSIVE
 ************************************************/
     #main-content {
         width: 93%;
     }
-    
+
     .profile {
-        
+
     }
-    
-    .photo-container { 
+
+    .photo-container {
         margin-right: 18px;
     }
-    
+
     .profile-info {
         width: 70%;
     }
-    
+
     .profile-name {
         font-size: 1.5em
     }
-    
+
     .profile-title {
         font-size: 1.2em
     }
-    
-    
+
+
     #flyers-info {
         margin-top: 122px;
         margin-bottom: 11px;
     }
-    
-    
-    
+
+
+
         #profiles-width{
         margin: 102px auto 0;
-        max-width: 1400px;    
+        max-width: 1400px;
     }
-    
+
 /***********************************************
 SUPPORTERS PAGE RESPONSIVE
 ************************************************/
-    
+
     #supporters-youth-photo{
         padding-top: 20px;
     }
-    
+
     #supporters-youth-photo img{
         padding: 0 15px;
     }
-    
+
     #about-youth-supporters{
-        padding: 10px 0;    
+        padding: 10px 0;
     }
-    
+
     #supporters-names {
         padding-top: 20px;
     }
-    
+
     #supporters-names p {
         font-size: 1rem;
     }
-    
+
     .supporters{
         width: 90%;
         padding: 20px 0 0 30px;
         padding-left: 0;
         margin-left: 5px;
     }
-    
+
     #supporters-names h2{
         font-size: 1.6rem;
         margin: 0;
     }
-    
+
     #supporters-names h3{
         font-size: 1.4rem;
         margin: 1px 0 5px;
     }
-    
+
     #supporters-names li{
         font-size: 1rem;
     }
-    
+
     .supporters-footer{
         display: block;
     }
@@ -1380,4 +1420,3 @@ SUPPORTERS PAGE RESPONSIVE
         padding-bottom: 148px;
     }
 }
-

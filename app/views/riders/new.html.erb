@@ -1,15 +1,4 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
-        <%= favicon_link_tag "favicon" %>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-        <%= stylesheet_link_tag("application.css") %>
-
-    </head>
     <body id="body-youth">
     <header id="header">
         <div id="header-content">
@@ -31,7 +20,7 @@
                 </nav>
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="../static_pages/apply" class="subRide selected">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>
+
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
 
             </div>
@@ -48,7 +37,6 @@
                 </div>
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="/static_pages/apply" class="subRide selected">Apply</a>
-            <a href="/sign_in" class="subRide">Sign In</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
 
@@ -63,75 +51,177 @@
         <div id="app-youthwidth">
 
         <div id="lower-apply">
-            <div id="applicationheader">
+          <div id="applicationheader">
 
-                <%= image_tag 'flyershead.png',id: "flyershead" %>
+          <%= image_tag 'flyershead.png',id: "flyershead" %>
 
-                    <h1>2017 APPLICATION</h1>
-                
-                <p style="color:red"> <%= @rider.errors.full_messages if @rider.errors.any? %> </p>
-                <%= form_for(@rider) do |f| %>
-    <div class="field">
-        <%= f.label :firstname,"First Name:" %>
-        <%= text_field(:rider, :firstname, style:"width: 250px") %><br><br>
-        <%= f.label :lastname, "Last Name" %>
-        <%= text_field(:rider, :lastname, style:"width: 250px") %><br><br>
-        <%= f.label :birthdate, "Birth Date" %>
-        <%= date_field(:rider, :birthdate) %><br><br>
-        <%= f.label :email %>
-        <%= email_field(:rider, :email, style:"width: 250px") %><br><br>
-        <%= f.label :phone %>
-        <%= text_field(:rider, :phone) %><br><br>
-        <%= f.label :address %>
-        <%= text_field(:rider, :address, style:"width: 233px") %>
-        <%= f.label :apt %>
-        <%= text_field(:rider, :apt, style:"width: 100px") %><br><br>
-        <%= f.label :city %>
-        <%= text_field(:rider, :city, style:"width: 250px") %><br>
-        <%= f.label :zip %>
-        <%= text_field(:rider, :zip, style:"width: 100px") %><br><br>
-        <%= f.label :school %>
-        <%= text_field(:rider, :school) %><br><br>
-        <%= f.label :feet, "Height: Feet" %>
-        <%= number_field(:rider, :feet, in: 4..6) %>
-        <%= f.label :inches %>
-        <%= number_field(:rider, :inches, in: 0..11) %><br><br>
-        <%= f.label :shirt_size, "T-shirt size" %>
-        <%= f.radio_button(:shirt, "S") %>
-            <%= label_tag(:shirt, "Small") %>
-        <%= f.radio_button(:shirt, "M") %>
-            <%= label_tag(:shirt, "Medium") %>
-        <%= f.radio_button(:shirt, "L") %>
-            <%= label_tag(:shirt, "Large") %>
-        <%= f.radio_button(:shirt, "XL") %>
-            <%= label_tag(:shirt, "X-Large") %><br><br>
-        <%= f.label :Can_you_ride_a_bike? %>
-        <%= f.radio_button(:ridebike, "Yes") %>
-            <%= label_tag(:ridebike, "Yes, I Can Ride.") %>
-        <%= f.radio_button(:ridebike, "No") %>
-            <%= label_tag(:ridebike, "No, I Can't Ride.") %><br><br>
+          <h1>2018 APPLICATION</h1>
 
-        <%= f.label :physical, "Do you currently take part in physical activities?" %> <br>
-        <%= f.radio_button(:physical, "Yes") %>
-            <%= label_tag(:physical, "Yes") %>
-        <%= f.radio_button(:physical, "No") %>
-            <%= label_tag(:physical, "No") %><br><br>
-        <%= f.label :actdesc, "If yes, please describe:" %> <br>
-        <%= text_area(:rider, :actdesc) %><br><br>
+          <% if @rider.errors.any? %>
+
+            <div class="total_errors">
+              <span class="error_msg">Please correct <%= pluralize(@rider.errors.count, "error") %> on the form.</span>
+            </div>
+          <% end %>
+
+
+          <%= form_for(@rider) do |f| %>
+      <div class="field">
+        <% if !(@rider.errors[:firstname].empty?) %>
+          <span class="error_msg">First Name <%= @rider.errors[:firstname].first %></span>
+        <% end %><br>
+        <span><%= f.label :firstname,"First Name" %></span>
+        <span><%= text_field(:rider, :firstname, style:"width: 250px") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:lastname].empty?) %>
+          <span class="error_msg">Last Name <%= @rider.errors[:lastname].first %></span>
+        <% end %><br>
+        <span><%= f.label :lastname, "Last Name" %></span>
+        <span><%= text_field(:rider, :lastname, style:"width: 250px") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:birthdate].empty?) %>
+          <span class="error_msg">Birth Date <%= @rider.errors[:birthdate].first %></span>
+        <% end %><br>
+        <span><%= f.label :birthdate, "Birth Date" %></span>
+        <span><%= date_field(:rider, :birthdate) %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:email].empty?) %>
+          <span class="error_msg">Email <%= @rider.errors[:email].first %></span>
+        <% end %><br>
+        <span><%= f.label :email %></span>
+        <span><%= email_field(:rider, :email, style:"width: 250px") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:phone].empty?) %>
+          <span class="error_msg">Phone <%= @rider.errors[:phone].first %></span>
+        <% end %><br>
+        <span><%= f.label :phone %></span>
+        <span><%= text_field(:rider, :phone) %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:address].empty?) %>
+          <span class="error_msg">Address <%= @rider.errors[:address].first %></span>
+        <% end %><br>
+        <span><%= f.label :address %></span>
+        <span><%= text_field(:rider, :address, style:"width: 233px") %></span>
+        <span><%= f.label :apt %></span>
+        <span><%= text_field(:rider, :apt, style:"width: 100px") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:city].empty?) %>
+          <span class="error_msg">City <%= @rider.errors[:city].first %></span>
+        <% end %><br>
+        <span><%= f.label :city %></span>
+        <span><%= text_field(:rider, :city, style:"width: 250px") %></span><br><br>
+        <% if !(@rider.errors[:zip].empty?) %>
+          <span class="error_msg">Zip Code <%= @rider.errors[:zip].first %></span>
+        <% end %><br>
+        <span><%= f.label :zip %></span>
+        <span><%= text_field(:rider, :zip, style:"width: 100px") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:school].empty?) %>
+          <span class="error_msg">School Name <%= @rider.errors[:school].first %></span>
+        <% end %><br>
+        <span><%= f.label :school %></span>
+        <span><%= text_field(:rider, :school) %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:feet].empty?) %>
+          <span class="error_msg">Height <%= @rider.errors[:feet].first %></span>
+        <% end %><br>
+        <span style="margin-left: 10px;">Height:</span>
+        <span><%= f.label :feet %></span>
+        <span><%= number_field(:rider, :feet, in: 4..6) %></span>
+        <span><%= f.label :inches %></span>
+        <span><%= number_field(:rider, :inches, in: 0..11) %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:shirt].empty?) %>
+          <span class="error_msg">Shirt <%= @rider.errors[:shirt].first %></span>
+        <% end %><br>
+        <span><%= f.label :shirt_size, "T-shirt size:" %></span>
+        <span><%= f.radio_button(:shirt, "S") %></span>
+            <%= label_tag(:shirt, "Small") %></span>
+        <span><%= f.radio_button(:shirt, "M") %></span>
+            <%= label_tag(:shirt, "Medium") %></span>
+        <span><%= f.radio_button(:shirt, "L") %></span>
+            <%= label_tag(:shirt, "Large") %></span>
+        <span><%= f.radio_button(:shirt, "XL") %></span>
+            <%= label_tag(:shirt, "X-Large") %></span><br><br>
+
+            <% if !(@rider.errors[:ridebike].empty?) %>
+              <span class="error_msg">Ride Bike <%= @rider.errors[:ridebike].first %></span>
+            <% end %><br>
+        <span><%= f.label :Can_you_ride_a_bike? %></span>
+        <span><%= f.radio_button(:ridebike, "Yes") %></span>
+            <%= label_tag(:ridebike, "Yes, I Can Ride.") %></span>
+        <span><%= f.radio_button(:ridebike, "No") %></span>
+            <%= label_tag(:ridebike, "No, I Can't Ride.") %></span>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:physical].empty?) %>
+          <span class="error_msg">Answer <%= @rider.errors[:physical].first %></span>
+        <% end %><br>
+        <span><%= f.label :physical, "Do you currently take part in physical activities?" %></span> <br>
+        <span><%= f.radio_button(:physical, "Yes") %></span>
+          <span><%= label_tag(:physical, "Yes") %></span>
+        <span><%= f.radio_button(:physical, "No") %></span>
+          <span><%= label_tag(:physical, "No") %></span><br><br>
+        <span><%= f.label :actdesc, "If yes, please describe:" %></span> <br>
+          <span><%= text_area(:rider, :actdesc) %></span>
+      </div>
+      <div class="field">
         <p>Please answer the following questions in 2 or 3 sentences:</p>
+        <% if !(@rider.errors[:whyjoin].empty?) %>
+          <span class="error_msg">Answer <%= @rider.errors[:whyjoin].first %></span>
+        <% end %><br>
         <%= f.label :whyjoin, "Why are you interested in joining the Fearless Flyers?" %> <br>
-        <%= text_area(:rider, :whyjoin) %><br><br>
+        <%= text_area(:rider, :whyjoin) %>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:bikeexp].empty?) %>
+          <span class="error_msg">Answer <%= @rider.errors[:bikeexp].first %></span>
+        <% end %><br>
         <%= f.label :bikeexp, "Briefly describe your experience riding bikes:" %> <br>
-        <%= text_area(:rider, :bikeexp) %><br><br>
+        <%= text_area(:rider, :bikeexp) %>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:athexp].empty?) %>
+          <span class="error_msg">Answer <%= @rider.errors[:athexp].first %></span>
+        <% end %><br>
         <%= f.label :athexp, "Have you participated in an organized athletic group before?" %> <br>
-        <%= text_area(:rider, :athexp) %><br><br>
+        <%= text_area(:rider, :athexp) %>
+      </div>
+      <div class="field">
+        <% if !(@rider.errors[:goal].empty?) %>
+          <span class="error_msg">Answer <%= @rider.errors[:goal].first %></span>
+        <% end %><br>
         <%= f.label :goal, "Please describe one personal goal in joining the Fearless Flyers:" %> <br>
         <%= text_area(:rider, :goal) %><br><br>
+      </div>
 
-        <br> <br>
+      <div class="field">
+          <% if !(@rider.errors[:waiver].empty?) %>
+            <span class="error_msg">Waiver
+              <%= @rider.errors[:waiver].first %>
+            </span>
+          <% end %><br>
+
+          <label id="read_waiver" for="application_waiver">
+            <span><%= f.check_box :waiver, id:"application_waiver" %></span>
+
+            <span>I <%= link_to "understand and accept all terms and conditions", '/waiver', style: "color: forestgreen; text-decoration: underline", target:"blank" %>
+            <%= label_tag :waiver, "of the OutCycling waiver." %></span>
+          </label>
+        </div>
+
        <%= f.submit "Submit", class:"button2" %>
-    </div>
-<% end %>
+
+    <% end %>
 
         </div>
         </div>
@@ -169,6 +259,3 @@
 
 
     </body>
-
-
-</html>

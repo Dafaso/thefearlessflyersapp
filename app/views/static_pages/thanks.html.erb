@@ -1,31 +1,16 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
-        
-        <%= favicon_link_tag 'favicon' %>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-          <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-       
-        <%= stylesheet_link_tag 'swiper.min.css' %>
-        <%= stylesheet_link_tag 'application.css' %>
-        
-    </head>
+
     <body id="body-youth">
     <header id="header">
         <div id="header-content">
-            
+
             <%= link_to image_tag('fearless_logo_crop.jpg', id: 'logo'),'/' %>
-            
-     
-            
+
+
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide">Home</a>
-            <a href="about" class="subRide menu-about">About</a>        
-                
+            <a href="about" class="subRide menu-about">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="about">Fearless Flyers Program</a></p>
@@ -34,14 +19,14 @@
                         <p class="drop-item clearfix"><a href="youth">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="photos" class="subRide selected">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>     
+
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide">Home</a>
             <a href="about.html" class="subRide mobile-menu-about">About</a>
@@ -51,50 +36,49 @@
                     <p class="mobile-submenu"><a href="staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="youth">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="photos" class="subRide selected">Photos</a>
-            <a href="apply" class="subRide">Apply</a> 
-            <a href="/sign_in" class="subRide">Sign In</a>
+            <a href="apply" class="subRide">Apply</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
-        
+
 		<br><br><br><br><br><br><br><br><br><br><br><br>
-        
+
        <h2>Thanks for applying....we'll be in touch soon!</h2>
         <br><br><br><br><br><br>
-     
-        
-        
+
+
+
         <!---------BX SLIDER---------->
-        
-        
-   
+
+
+
         <div id="partners" class="youth-footer">
            <ul>
 
         <!--<li><%= link_to image_tag('center_logo.png'), "https://gaycenter.org/", target:"_blank" %></li>-->
-               
+
             <li><%= link_to image_tag('outcyclinglogo.png'), "http://www.outcycling.org/", target:"_blank" %></li>
 
         <!--<li><%= link_to image_tag('bike_ny.png'), "http://www.bike.nyc/", target:"_blank" %></li> -->
-                
+
 
             </ul>
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div> 
-        
+        </div>
+
             <%= javascript_include_tag 'app' %>
-        
+
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -104,10 +88,7 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-        
-    </body>  
-    
-    
-</html>
+        </script>
+
+
+    </body>

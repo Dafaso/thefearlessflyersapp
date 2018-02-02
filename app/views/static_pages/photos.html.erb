@@ -1,22 +1,4 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
 
-        <%= favicon_link_tag 'favicon' %>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-          <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-
-
-        <%= stylesheet_link_tag 'baguetteBox.min.css' %>
-        <%= stylesheet_link_tag 'justifiedGallery.min.css' %>
-        
-        <%= stylesheet_link_tag 'application.css' %>
-
-    </head>
     <body id="body-youth">
     <header id="header">
         <div id="header-content">
@@ -40,7 +22,7 @@
                 </nav>
             <a href="photos" class="subRide selected">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide" disabled>Sign-In</a>
+
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
 
             </div>
@@ -57,7 +39,6 @@
                 </div>
             <a href="photos" class="subRide selected">Photos</a>
             <a href="apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide">Sign In</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
 
@@ -144,11 +125,11 @@
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
         </div>
-        
+
         <%= javascript_include_tag 'jquery.justifiedGallery.min.js' %>
-        
+
         <%= javascript_include_tag 'app' %>
-        
+
         <%= javascript_include_tag 'baguetteBox.min.js' %>
 
         <script>
@@ -184,10 +165,10 @@
 //    });
 
 //            $(document).ready(function(){
-            
+
                 baguetteBox.run('.gallery', {
                 });
-//            
+//
  //           });
 
         </script>
@@ -208,6 +189,3 @@
 
 
     </body>
-
-
-</html>

@@ -1,32 +1,18 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <% content_for :title, "Fearless Flyers" %>
-        
-        <%= favicon_link_tag 'favicon' %>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600|Roboto:400,500,700" rel="stylesheet">
-        
-        <%= stylesheet_link_tag("application.css") %>
-        
-    </head>
+
     <body id="body-youth">
     <header id="header">
-        <div id="header-content">            
+        <div id="header-content">
 
-            
+
             <%= link_to '/' do %>
                 <%= image_tag 'fearless_logo_crop.jpg', id: "logo", alt: 'flyers logo'%>
             <% end %>
-            
-            
+
+
             <div id="browser-menu-youth" >
             <a href="/" class="subRide selected">Home</a>
-            <a href="static_pages/about" class="subRide menu-about">About</a>        
-                
+            <a href="static_pages/about" class="subRide menu-about">About</a>
+
                 <nav id="rides-drop">
                     <ul id="drop-menu">
                         <p class=" drop-item clearfix"><a href="static_pages/about">Fearless Flyers Program</a></p>
@@ -35,14 +21,13 @@
                         <p class="drop-item clearfix"><a href="static_pages/youth">Youth Rider Profiles</a></p>
                         <p class="drop-item clearfix"><a href="static_pages/supporters">Supporters</a></p>
                     </ul>
-                </nav>    
+                </nav>
             <a href="/static_pages/photos" class="subRide">Photos</a>
             <a href="static_pages/apply" class="subRide">Apply</a>
-            <a href="/sign_in" class="subRide">Sign-In</a>     
             <a target="_blank" href="https://flyers2018.causevox.com/" class="subRide" style="color: lightgreen">Donate</a>
-   
+
             </div>
-        </div>    
+        </div>
         <div id="mobile_menu">
             <a href="/" class="subRide selected">Home</a>
             <a href="static_pages/about.html" class="subRide mobile-menu-about">About</a>
@@ -52,62 +37,61 @@
                     <p class="mobile-submenu"><a href="static_pages/staff">Board / Staff</a></p>
                     <p class="mobile-submenu"><a href="static_pages/youth">Youth Rider Profiles</a></p>
                     <p class="mobile-submenu"><a href="static_pages/supporters">Supporters</a></p>
-                </div>    
+                </div>
             <a href="/static_pages/photos" class="subRide">Photos</a>
-            <a href="static_pages/apply" class="subRide">Apply</a> 
-            <a href="/sign_in" class="subRide">Sign In</a>
+            <a href="static_pages/apply" class="subRide">Apply</a>
             <a target="_blank" href="https://flyers2017.causevox.com/" class="subRide donate-button" style="color: lightgreen">Donate</a>
         </div>
-         
+
         <div id="nav_lines">
             <p class="hamburger">
             </p>
-        </div>    
+        </div>
     </header>
         <div class="jumbotron-youth">
-            
+
             <p id="sunday"></p>
-            
+
         </div>
         <div id="youth-text" >
             <span id="oc-youth">YOUTH CYCLING INITIATIVE</span>
-            
+
         </div>
         <div id="app-youthwidth" class="clearfix">
         <div id="lower-youth">
             <div id="about-youth" class="home-parag">
-                
+
                 <div id="home-parag">
-                    <p><span class="fearless-flyers-program">OutCycling </span>is a non profit 501(c)3 community cycling organization. We believe in the importance of the physical and emotional health that cycling provides and strive to share this philosophy with everyone. Our motto is: Fun, Fitness and Friendship for all.  
+                    <p><span class="fearless-flyers-program">OutCycling </span>is a non profit 501(c)3 community cycling organization. We believe in the importance of the physical and emotional health that cycling provides and strive to share this philosophy with everyone. Our motto is: Fun, Fitness and Friendship for all.
 
                     <p><span class="fearless-flyers-program">The mission of the OutCycling Fearless  Flyers program</span> is to work with LGBTQ Youth ages 16 - 21, to teach them cycling skills, foster group camaraderie and offer leadership opportunities for returning participants. </p>
-    
+
                     <div id="grad-photo">
-                        
+
                     <%= image_tag("flyers_graduation.jpg", alt: "flyers graduation", class: "clearfix") %>
-                
+
                 <span id="inset">GRADUATION DAY 2016</span>
-                </div>    
+                </div>
 
                     <p><span class="fearless-flyers-program">The Fearless Flyers</span> is a 10-week training program for New York City youth ages 16-21 that includes safety training in partnership with BikeNY and the NYC DOT. The program empowers young adults to build self-confidence, leadership and cycling skills. Each participant is provided a bike and helmet for the Saturday morning training rides. Training rides start at 10 miles and gradually increase to finish with a 35 mile ride. <strong>Graduates who successfully complete the training earn their own bike, helmet and lock.</strong></p>
-                </div>    
-                
+                </div>
+
             </div>
-            
+
         </div>
             <div id="youth-grads" class="clearfix">
-                
+
                 <div class="global_video clearfix">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/laW9gc5A0ko?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
-                
+
                 <div id="grad1">
                 <%= image_tag("jayden.jpg", alt: "jayden", class: "clearfix") %>
                     <p class="info name">JAYDEN TAVAREZ</p>
                     <p class="info">Age: 22</p>
                     <p class="info">From: Brooklyn</p>
                     <p class="info">Class: 2016</p>
-                
+
                     <p class="desc" class="clearfix">"As a person who started off always in the back, Fearless Flyers showed me how to self motivate - I was in the front for the last ride of the season. I learned the importance of self care."</p>
                 </div>
                 <div id="grad1">
@@ -117,7 +101,7 @@
                     <p class="info">From: New York</p>
                     <p class="info">Class: 2016</p>
                     <p class="desc">"Even when I won't want to do something, I should take one day, one hour, one pedal at a time - and I will succeed. It's better to be the weakest of the strong than the strongest of the weak."</p>
-                </div> 
+                </div>
                 <div id="grad1" >
                 <%= image_tag("leonardo.jpg", alt: "leonardo", class: "clearfix") %>
                     <p class="info name" >LEONARDO CANELA</p>
@@ -125,10 +109,10 @@
                     <p class="info" >From: Brooklyn</p>
                     <p class="info" >Class: 2015</p>
                     <p class="desc" >"Fearless Flyers taught me I can prevail through anything and it has showed me to never give up because everything just gets better. I learned how to become more of an outspoken leader; to be more outgoing and to always be fearless."</p>
-                </div>   
-            </div> 
+                </div>
+            </div>
         </div> <!--youthwidth-->
-        
+
         <div id="partners" class="youth-footer">
             <ul>
 
@@ -138,16 +122,16 @@
             <div id="contact-info">
                 <p>Outcycling | 115 West 18th Street, NYC, 2nd floor | graham@outcycling.org</p>
             </div>
-        </div> 
-        
-        
-      
-        
+        </div>
+
+
+
+
         <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
-        
-        <%= javascript_include_tag "app" %>  
+
+        <%= javascript_include_tag "app" %>
 <!--        google analytics below-->
-        
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -157,9 +141,6 @@
           ga('create', 'UA-81832841-2', 'auto');
           ga('send', 'pageview');
 
-        </script>        
-        
-    </body>  
-    
-    
-</html>
+        </script>
+
+    </body>
