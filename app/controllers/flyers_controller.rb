@@ -6,7 +6,7 @@ class FlyersController < ApplicationController
         @riders = Rider.all.order("firstname")
         if !!(params[:search])
 
-          @riders = Rider.select{|r|(r.firstname.downcase + " " + r.lastname.downcase).include?(params[:search].downcase)}
+          @riders = @riders.select{|r|(r.firstname.downcase + " " + r.lastname.downcase).include?(params[:search].downcase)}
 
         end
 

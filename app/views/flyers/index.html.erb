@@ -24,10 +24,8 @@
     <%= submit_tag "Search" %>
 <% end %>
 
-
-
-<%= form_tag(flyers_path, :method => "get", id: "search-form") do %>
-        <%= submit_tag "Show All" %>
+<%= form_tag flyers_path, method: :get, id: "search-form" do %>
+    <%= submit_tag "Show All" %>
 <% end %>
 
 

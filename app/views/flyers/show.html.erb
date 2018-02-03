@@ -1,7 +1,15 @@
+<br>
+<% if current_flyer %>
+    <span>Logged In: </span>
+    <span><%= current_flyer.email %></span>
+    <br>
+    <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>
+<% end %>
+<br>
+<div id="show_rider">
+    <p><%= link_to "Back To List of Riders", '/flyers',style:"color:gray" %></p>
 
-<div>
-
-    <p><strong>Name:</strong> <%= @rider.firstname %> <%= @rider.lastname %></p>
+    <h3><strong>Name:</strong> <%= @rider.firstname %> <%= @rider.lastname %></h3>
     <p><strong>Email:</strong> <%= @rider.email %></p>
     <p><strong>Birth Date:</strong> <%= @rider.birthdate %></p>
     <p><strong>Phone:</strong> <%= @rider.phone %></p>
@@ -12,7 +20,7 @@
     <p><strong>School:</strong> <%= @rider.school %></p>
     <p><strong>Height:</strong> <%= @rider.feet %> <%= @rider.inches %></p>
     <p><strong>Shirt size:</strong> <%= @rider.shirt %></p>
-    <p><strong>Can Ride Bike?</strong> <%= @rider.ridebike %></p>
+    <p><strong>Comfortable on a Bike?</strong> <%= @rider.ridebike %></p>
     <p><strong>Physical Activity?</strong> <%= @rider.physical %></p>
     <p><strong>Activity Description:</strong> <%= @rider.actdesc %></p>
     <p><strong>Why Join:</strong> <%= @rider.whyjoin %></p>
@@ -24,8 +32,6 @@
     <p><strong>Interview Date:</strong> <%= @rider.interview.strftime("%B %d, %Y") rescue "Not scheduled yet." %></p>
     <p><strong>Admin Notes:</strong> <%= @rider.notes %></p>
     <p><strong>ACCEPTED:</strong> <%= @rider.accepted == false ? "NO" : "YES" %></p>
-
-
 
 <%= link_to "Edit Rider", edit_rider_path(@rider), style:"color:gray" %>
 <br>
