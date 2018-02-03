@@ -1,9 +1,10 @@
-$(document).ready(function(){
 
   var open=false;
+  console.log(open);
 
   $("html").click(function(){
     if (open===true){
+
       $("#drop-menu").slideUp(20,function(){
         open=false;
       });
@@ -52,7 +53,7 @@ $(document).ready(function(){
   });
 
 
-});
+
 //
 // $('.gallery').justifiedGallery({
 //     rowHeight : 150,
