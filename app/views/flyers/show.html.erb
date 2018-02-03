@@ -19,7 +19,13 @@
     <p><strong>Bike Experience:</strong> <%= @rider.bikeexp %></p>
     <p><strong>Athletic Experience:</strong> <%= @rider.athexp %></p>
     <p><strong>Goal:</strong> <%= @rider.goal %></p>
+    <p><strong>Allergies:</strong> <%= @rider.allergies %></p>
+    <p><strong>Health issues:</strong> <%= @rider.health %></p>
+    <p><strong>Interview Date:</strong> <%= @rider.interview.strftime("%B %d, %Y") rescue "Not scheduled yet." %></p>
     <p><strong>Admin Notes:</strong> <%= @rider.notes %></p>
+    <p><strong>ACCEPTED:</strong> <%= @rider.accepted == false ? "NO" : "YES" %></p>
+
+
 
 <%= link_to "Edit Rider", edit_rider_path(@rider), style:"color:gray" %>
 <br>

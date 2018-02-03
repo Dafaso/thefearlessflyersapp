@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/apply'
 
-  get 'static_pages/thanks'
+  get 'static_pages/thanks/:rider' => 'static_pages#thanks', as: :thanks
 
   get '/waiver' => 'static_pages#waiver', as: :waiver
 

@@ -126,7 +126,7 @@
         <% if !(@rider.errors[:school].empty?) %>
           <span class="error_msg">School Name <%= @rider.errors[:school].first %></span>
         <% end %><br>
-        <span><%= f.label :school %></span>
+        <span><%= f.label :school, "School (if applicable)" %></span>
         <span><%= text_field(:rider, :school) %></span>
       </div>
       <div class="field">
@@ -145,22 +145,25 @@
         <% end %><br>
         <span><%= f.label :shirt_size, "T-shirt size:" %></span>
         <span><%= f.radio_button(:shirt, "S") %></span>
-            <%= label_tag(:shirt, "Small") %></span>
+            <span><%= label_tag(:shirt, "Small") %></span>
         <span><%= f.radio_button(:shirt, "M") %></span>
-            <%= label_tag(:shirt, "Medium") %></span>
+            <span><%= label_tag(:shirt, "Medium") %></span>
         <span><%= f.radio_button(:shirt, "L") %></span>
-            <%= label_tag(:shirt, "Large") %></span>
+            <span><%= label_tag(:shirt, "Large") %></span>
         <span><%= f.radio_button(:shirt, "XL") %></span>
-            <%= label_tag(:shirt, "X-Large") %></span><br><br>
+            <span><%= label_tag(:shirt, "X-Large") %></span><br><br>
 
             <% if !(@rider.errors[:ridebike].empty?) %>
               <span class="error_msg">Ride Bike <%= @rider.errors[:ridebike].first %></span>
             <% end %><br>
-        <span><%= f.label :Can_you_ride_a_bike? %></span>
-        <span><%= f.radio_button(:ridebike, "Yes") %></span>
-            <%= label_tag(:ridebike, "Yes, I Can Ride.") %></span>
-        <span><%= f.radio_button(:ridebike, "No") %></span>
-            <%= label_tag(:ridebike, "No, I Can't Ride.") %></span>
+        <span><%= f.label :ridebike, "How comfortable do you feel riding a bike in NYC?" %></span><br>
+        <span><%= f.radio_button(:ridebike, "Very") %></span>
+            <span><%= label_tag(:ridebike, "Very") %></span>
+        <span><%= f.radio_button(:ridebike, "Somewhat") %></span>
+            <span><%= label_tag(:ridebike, "Somewhat") %></span>
+        <span><%= f.radio_button(:ridebike, "Not") %></span>
+            <span><%= label_tag(:ridebike, "Not Comfortable") %></span>
+
       </div>
       <div class="field">
         <% if !(@rider.errors[:physical].empty?) %>
@@ -202,6 +205,16 @@
         <% end %><br>
         <%= f.label :goal, "Please describe one personal goal in joining the Fearless Flyers:" %> <br>
         <%= text_area(:rider, :goal) %><br><br>
+      </div>
+
+      <div class="field">
+        <%= f.label :allergies, "Please list any food allergies we should be aware of:" %> <br>
+        <%= text_area(:rider, :allergies) %><br><br>
+      </div>
+
+      <div class="field">
+        <%= f.label :health, "Please list any health issues we should be aware of:" %> <br>
+        <%= text_area(:rider, :health) %><br><br>
       </div>
 
       <div class="field">

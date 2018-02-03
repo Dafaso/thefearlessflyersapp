@@ -34,7 +34,7 @@ class FlyersController < ApplicationController
     @rider = Rider.find(params[:id])
         if @rider.update_attributes(rider_params)
 
-            redirect_to '/flyers'
+            redirect_to @rider
         else
             render 'edit'
         end
@@ -53,7 +53,7 @@ class FlyersController < ApplicationController
     private
 
     def rider_params
-        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password, :notes)
+        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password, :notes, :allergies, :health, :interview, :accepted )
     end
 
 end

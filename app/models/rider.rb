@@ -1,7 +1,7 @@
 class Rider < ApplicationRecord
 
 
-    validates :firstname, :lastname, :birthdate, :phone, :city, :zip, :school, :feet, :inches, :shirt, :ridebike, :physical, presence: { :message => "required."}
+    validates :firstname, :lastname, :birthdate, :phone, :city, :zip, :feet, :inches, :shirt, :ridebike, :physical, presence: { :message => "required."}
 
     validates :phone, presence: true, length: {maximum: 15},
                     format: { with: /\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z/ }

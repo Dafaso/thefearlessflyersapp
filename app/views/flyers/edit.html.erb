@@ -1,35 +1,35 @@
 <%= form_for(@rider) do |f| %>
     <div class="field">
         <%= @rider.errors.full_messages if @rider.errors.any? %>
-        <span>First </span><%= f.label :firstname %> 
+        <span>First </span><%= f.label :firstname %>
         <%= text_field(:rider, :firstname) %><br><br>
-        <%= f.label :lastname %> 
+        <%= f.label :lastname %>
         <%= text_field(:rider, :lastname) %><br><br>
         <%= f.label :birthdate %>
         <%= date_field(:rider, :birthdate) %><br><br>
-        <%= f.label :email %> 
+        <%= f.label :email %>
         <%= email_field(:rider, :email) %><br><br>
-        <%= f.label :phone %> 
+        <%= f.label :phone %>
         <%= text_field(:rider, :phone) %><br><br>
-        <%= f.label :address %> 
+        <%= f.label :address %>
         <%= text_field(:rider, :address) %>
-        <%= f.label :apt %> 
+        <%= f.label :apt %>
         <%= text_field(:rider, :apt) %><br><br>
-        <%= f.label :city %> 
+        <%= f.label :city %>
         <%= text_field(:rider, :city) %><br>
-        <%= f.label :zip %> 
+        <%= f.label :zip %>
         <%= text_field(:rider, :zip) %><br><br>
-        <%= f.label :school %> 
+        <%= f.label :school %>
         <%= text_field(:rider, :school) %><br><br>
-        <%= f.label :feet %> 
+        <%= f.label :feet %>
         <%= number_field(:rider, :feet, in: 4..6) %>
-        <%= f.label :inches %> 
+        <%= f.label :inches %>
         <%= number_field(:rider, :inches, in: 0..11) %><br><br>
         <%= f.label :shirt_size %>
         <%= f.radio_button(:shirt, "S") %>
             <%= label_tag(:shirt, "Small") %>
         <%= f.radio_button(:shirt, "M") %>
-            <%= label_tag(:shirt, "Medium") %> 
+            <%= label_tag(:shirt, "Medium") %>
         <%= f.radio_button(:shirt, "L") %>
             <%= label_tag(:shirt, "Large") %>
         <%= f.radio_button(:shirt, "XL") %>
@@ -51,9 +51,21 @@
         <%= text_area(:rider, :athexp) %><br><br>
         <%= f.label :goal %> <br>
         <%= text_area(:rider, :goal) %><br><br>
-        <%= f.label :admin_notes %> <br>
+        <%= f.label :allergies %> <br>
+        <%= text_area(:rider, :allergies) %><br><br>
+        <%= f.label :health %> <br>
+        <%= text_area(:rider, :health) %><br><br>
+        <%= f.label :notes %> <br>
         <%= text_area(:rider, :notes) %><br><br>
-                
+
+        <span><%= f.label :interview, "Interview Date" %></span>
+        <span><%= date_field(:rider, :interview) %></span>
+        <br><br>
+        <span><%= f.label :accepted %></span>
+        <span><%= f.radio_button(:accepted, true) %>Yes</span>
+
+        <span><%= f.radio_button(:accepted, false) %>No</span>
+
         <br> <br>
         <%= f.submit "Save Edits" %>
     </div>

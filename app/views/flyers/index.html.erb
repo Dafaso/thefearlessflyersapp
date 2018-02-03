@@ -42,9 +42,10 @@
         <th>Name</th>
         <th>Email</th>
         <th>Shirt</th>
-        <th>Birth</th>
         <th>Age</th>
+        <th>Interview</th>
         <th>Notes</th>
+        <th>Accepted</th>
         <th>Info</th>
       </tr>
     </thead>
@@ -56,10 +57,11 @@
         <td><%= x.firstname %> <%= x.lastname %></td>
         <td><%= x.email %></td>
         <td><%= x.shirt %></td>
-        <td><%= x.birthdate.month %><span>-</span><%= x.birthdate.day %><span>-</span><%= x.birthdate.year %></td>
         <td><% age = (Time.now.year)-(x.birthdate.year)%>
         <% age-=1 if (Time.now.month)<(x.birthdate.month)||(Time.now.month)==(x.birthdate.month)&&(Time.now.day)<(x.birthdate.day) %><%= age %></td>
+        <td><%= x.interview.strftime("%B %d, %Y") rescue "--" %></td>
         <td><%= x.notes %></td>
+        <td><%= x.accepted == true ? "YES" : "NO" %></td>
         <td><%= link_to "More info", rider_path(x), style:"color: gray" %></td>
 
       </tr>

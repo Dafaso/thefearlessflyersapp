@@ -30,18 +30,18 @@ $(".menu-about").click(function(e) {
 //});
 
 $("#nav_lines").on("click", function(){
-    $("#mobile_menu").slideToggle(600);
+    $("#mobile_menu").slideToggle(300);
     $(".hamburger").toggleClass("hamburger_toggle");
-    $("#mobile-drop").slideUp(300);
+    $("#mobile-drop").slideUp(200);
 }); //mobile menu
 
 $(".mobile-menu-about").click(function(e){
     e.preventDefault();
-$("#mobile-drop").slideToggle(300);
+$("#mobile-drop").slideToggle(200);
 }); //"About" mobile sub-menu
 
 $(".donate-button").click(function(){
-    $("#mobile_menu").slideUp(300);
+    $("#mobile_menu").slideUp(100);
 });
 
 $(window).resize(function(){

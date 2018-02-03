@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202155123) do
+ActiveRecord::Schema.define(version: 20180203012251) do
 
   create_table "flyers", force: :cascade do |t|
     t.string   "firstname"
@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 20180202155123) do
     t.datetime "updated_at",                 null: false
     t.text     "notes"
     t.boolean  "waiver",     default: false
+    t.text     "allergies"
+    t.text     "health"
+    t.date     "interview"
+    t.boolean  "accepted",   default: false
     t.index ["flyer_id"], name: "index_riders_on_flyer_id"
   end
 

@@ -10,7 +10,7 @@ class RidersController < ApplicationController
 
           RiderMailer.signup(@rider).deliver
 
-          redirect_to '/static_pages/thanks'
+          redirect_to thanks_path(@rider)
         else
           render :new
         end
@@ -20,7 +20,7 @@ class RidersController < ApplicationController
     private
 
     def rider_params
-        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :waiver)
+        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :waiver, :allergies, :health, :intervew, :accepted)
     end
 
 
