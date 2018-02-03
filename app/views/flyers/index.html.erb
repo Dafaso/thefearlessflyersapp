@@ -1,12 +1,10 @@
 <br>
-<% if current_flyer %>
-    <span>Logged In: </span>
-    <span><%= current_flyer.email %></span>
-    <br>
-    <p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>
-<% end %>
+<span>Logged In: </span>
+<span><%= current_flyer.email %></span>
 <br>
+<p><%= link_to "Log Out", logout_path, method: "delete",style:"color: grey" %></p>
 
+<p><%= link_to "Email Riders", email_path, style:"color: black; text-decoration: underline; "  %></p>
 
 <%= form_tag(flyers_path, method: "get", id: "search-form") do %>
     <span>Search:</span><br>

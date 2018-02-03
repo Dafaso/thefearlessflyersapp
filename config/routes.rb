@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   patch 'flyers/:id' => 'flyers#update'
   post '/flyers' => 'flyers#create'
 
+  get '/email' => 'flyers#email', as: :email
+  post '/email' => 'flyers#email'
 
   get '/sign_in' => 'sessions#new', as: :sign_in
 

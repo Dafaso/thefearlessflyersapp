@@ -7,7 +7,7 @@ class RiderMailer < ApplicationMailer
   #
   def signup(rider)
     @rider = rider
-    
+
     mail to: rider.email, subject: "Fearless Flyer Signup", bcc:["dafaso1@gmail.com"]
   end
 
@@ -20,6 +20,6 @@ class RiderMailer < ApplicationMailer
     @name = name
     @body = body
 
-    mail to: email, subject: subject, bcc: ["dafaso1@gmail.com"]
+    mail to: email, subject: subject
   end
 end
