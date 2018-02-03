@@ -178,7 +178,7 @@
           <span><%= text_area(:rider, :actdesc) %></span>
       </div>
       <div class="field">
-        <p>Please answer the following questions in 2 or 3 sentences:</p>
+        <p>Please answer the following four questions in 2 or 3 sentences:</p>
         <% if !(@rider.errors[:whyjoin].empty?) %>
           <span class="error_msg">Answer <%= @rider.errors[:whyjoin].first %></span>
         <% end %><br>
