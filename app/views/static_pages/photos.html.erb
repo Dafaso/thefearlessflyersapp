@@ -136,40 +136,45 @@
 
 
  //   $(document).ready(function(){
+        var loadIt = function() {
         $('.gallery').justifiedGallery({
-            rowHeight : 150,
-            lastRow : 'nojustify',
-            margins : 5,
-            border : 5,
+          rowHeight : 150,
+          lastRow : 'nojustify',
+          margins : 5,
+          border : 5,
 
 
-            sizeRangeSuffixes : {
-                'lt100':'_a',
-                'lt240':'_b',
-                'lt320':'_c',
-                'lt500':'_d',
-                'lt640':'_e',
-                'lt1024':'_f'
-            },
+          sizeRangeSuffixes : {
+            'lt100':'_a',
+            'lt240':'_b',
+            'lt320':'_c',
+            'lt500':'_d',
+            'lt640':'_e',
+            'lt1024':'_f'
+          },
 
-            captionSettings : {
-                animationDuration: 1100,
-                visibleOpacity: 0.9,
-                nonVisibleOpacity: 0.0
-            },
+          captionSettings : {
+            animationDuration: 1100,
+            visibleOpacity: 0.9,
+            nonVisibleOpacity: 0.0
+          },
 
-            rel : 'gallery1',
-
-
+          rel : 'gallery1',
         });
+      }
+
+      setTimeout(loadIt,10)
+      // delay loading the gallery by .01 second otherwise it won't load unless page is refreshed.
 //    });
 
-          $(document).on('page:load', function($) {
-            baguetteBox.run('.gallery', {
-            });
-          });
+      $(document).ready(function(){
 
-        </script>
+        baguetteBox.run('.gallery', {
+        });
+
+      });
+
+      </script>
 
 
 <!--        google analytics below-->

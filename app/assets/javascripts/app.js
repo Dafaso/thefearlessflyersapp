@@ -1,27 +1,26 @@
+$(document).ready(function(){
 
+  var open=false;
 
-var open=false;
-
-$("html").click(function(){
+  $("html").click(function(){
     if (open===true){
-   $("#drop-menu").slideUp(20,function(){
-       open=false;
-   });
+      $("#drop-menu").slideUp(20,function(){
+        open=false;
+      });
+    }
+  });
 
-    };
-});
-
-$(".menu-about").click(function(e) {
+  $(".menu-about").click(function(e) {
     e.preventDefault();
     $("#drop-menu").slideToggle(50,"linear",
     function(){
-        if (open===false){
-            open=true;
-        }else{
-            open=false;
-        };
+      if (open===false){
+        open=true;
+      }else{
+        open=false;
+      }
     });
-});
+  });
 
 
 //$(".r").click(function(e){
@@ -29,29 +28,31 @@ $(".menu-about").click(function(e) {
 //    $(".hideul").css("display","block");
 //});
 
-$("#nav_lines").on("click", function(){
+  $("#nav_lines").on("click", function(){
     $("#mobile_menu").slideToggle(300);
     $(".hamburger").toggleClass("hamburger_toggle");
     $("#mobile-drop").slideUp(200);
-}); //mobile menu
+  }); //mobile menu
 
-$(".mobile-menu-about").click(function(e){
+  $(".mobile-menu-about").click(function(e){
     e.preventDefault();
-$("#mobile-drop").slideToggle(200);
-}); //"About" mobile sub-menu
+    $("#mobile-drop").slideToggle(200);
+  }); //"About" mobile sub-menu
 
-$(".donate-button").click(function(){
+  $(".donate-button").click(function(){
     $("#mobile_menu").slideUp(100);
-});
+  });
 
-$(window).resize(function(){
+  $(window).resize(function(){
     if($(this).width() > 1020){
-   $("#mobile_menu").slideUp(100);
-   $(".hamburger").removeClass("hamburger_toggle");   $("#mobile-drop").slideUp(100);
-    }//close full screen drop menu when pc screen increases.
+      $("#mobile_menu").slideUp(100);
+      $(".hamburger").removeClass("hamburger_toggle");
+      $("#mobile-drop").slideUp(100);
+    }
+  });
+
+
 });
-
-
 //
 // $('.gallery').justifiedGallery({
 //     rowHeight : 150,
