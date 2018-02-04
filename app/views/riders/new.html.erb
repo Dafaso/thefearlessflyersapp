@@ -85,7 +85,7 @@
           <span class="error_msg">Birth Date <%= @rider.errors[:birthdate].first %></span>
         <% end %><br>
         <span><%= f.label :birthdate, "Birth Date" %></span>
-        <span><%= date_select(:rider, :birthdate) %></span>
+        <span><%= date_select(:rider, :birthdate, :start_year=>1990,:end_year=>2003) %></span>
       </div>
       <div class="field">
         <% if !(@rider.errors[:email].empty?) %>

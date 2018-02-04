@@ -6,7 +6,7 @@
         <%= f.label :lastname %>
         <%= text_field(:rider, :lastname) %><br><br>
         <%= f.label :birthdate, "Birth Date" %>
-        <%= date_select(:rider, :birthdate) %><br><br>
+        <%= date_select(:rider, :birthdate, :start_year=>1990,:end_year=>2003) %><br><br>
         <%= f.label :email %>
         <%= email_field(:rider, :email) %><br><br>
         <%= f.label :phone %>
