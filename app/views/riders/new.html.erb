@@ -85,7 +85,7 @@
           <span class="error_msg">Birth Date <%= @rider.errors[:birthdate].first %></span>
         <% end %><br>
         <span><%= f.label :birthdate, "Birth Date" %></span>
-        <span><%= date_field(:rider, :birthdate) %></span>
+        <span><%= date_select(:rider, :birthdate) %></span>
       </div>
       <div class="field">
         <% if !(@rider.errors[:email].empty?) %>
@@ -214,7 +214,7 @@
 
       <div class="field">
         <%= f.label :health, "Please list any health issues we should be aware of:" %> <br>
-        <%= text_area(:rider, :health) %><br><br>
+        <%= text_area(:rider, :health) %><br>
       </div>
 
       <div class="field">
@@ -222,12 +222,12 @@
             <span class="error_msg">Waiver
               <%= @rider.errors[:waiver].first %>
             </span>
-          <% end %><br>
+          <% end %>
 
           <label id="read_waiver" for="application_waiver">
-            <span><%= f.check_box :waiver, id:"application_waiver" %></span>
+            <span><%= f.check_box :waiver, id:"application_waiver" %>
 
-            <span>I <%= link_to "understand and accept all terms and conditions", '/waiver', style: "color: forestgreen; text-decoration: underline", target:"blank" %>
+            I <%= link_to "understand and accept all terms and conditions", '/waiver', style: "color: forestgreen; text-decoration: underline", target:"blank" %>
             <%= label_tag :waiver, "of the OutCycling waiver." %></span>
           </label>
         </div>

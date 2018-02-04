@@ -1,6 +1,6 @@
 class FlyersController < ApplicationController
 
-    before_action :require_flyer, only: [:index,:show,:edit,:update,:new]
+    before_action :require_flyer
 
     def index
         @riders = Rider.all.sort_by{|r| [r.firstname.downcase, r.lastname.downcase]}
@@ -18,7 +18,17 @@ class FlyersController < ApplicationController
 
 
     def new
-       @rider = Rider.new
+       @flyer = Flyer.new
+    end
+
+    def create
+       @flyer = Flyer.new(flyer_params)
+        if @flyer.save
+
+            redirect_to flyers_path
+        else
+            render 'new'
+        end
     end
 
     def show
@@ -27,7 +37,7 @@ class FlyersController < ApplicationController
 
 
     def edit
-        @rider =Rider.find(params[:id])
+        @rider = Rider.find(params[:id])
     end
 
     def update
@@ -37,16 +47,6 @@ class FlyersController < ApplicationController
             redirect_to @rider
         else
             render 'edit'
-        end
-    end
-
-    def create
-       @rider = Rider.new(rider_params)
-        if @rider.save
-
-            redirect_to '/static_pages/thanks'
-        else
-            render 'new'
         end
     end
 
@@ -80,8 +80,12 @@ class FlyersController < ApplicationController
 
     private
 
+    def flyer_params
+        params.require(:flyer).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password, :notes, :allergies, :health, :interview, :accepted )
+    end
+
     def rider_params
-        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :password, :notes, :allergies, :health, :interview, :accepted )
+        params.require(:rider).permit(:firstname, :lastname, :birthdate, :email, :phone, :address, :city, :school, :feet, :inches, :zip, :apt, :shirt, :ridebike, :physical, :actdesc, :whyjoin, :bikeexp, :athexp, :goal, :notes, :allergies, :health, :interview, :accepted )
     end
 
 

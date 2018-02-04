@@ -1,56 +1,16 @@
-<%= form_for(@flyer) do |f| %> 
+<%= form_for(@flyer) do |f| %>
     <div class="field">
-        <span>First </span><%= f.label :firstname %>
+        <%= f.label :firstname %>
         <%= text_field(:flyer, :firstname) %><br><br>
         <%= f.label :lastname %>
         <%= text_field(:flyer, :lastname) %><br><br>
-        <%= f.label :birthdate %>
-        <%= date_field(:flyer, :birthdate) %><br><br>
+
         <%= f.label :email %>
         <%= email_field(:flyer, :email) %><br><br>
         <%= f.label :phone %>
         <%= text_field(:flyer, :phone) %><br><br>
-        <%= f.label :address %>
-        <%= text_field(:flyer, :address) %>
-        <%= f.label :apt %>
-        <%= text_field(:flyer, :apt) %><br><br>
-        <%= f.label :city %>
-        <%= text_field(:flyer, :city) %><br>
-        <%= f.label :zip %>
-        <%= text_field(:flyer, :zip) %><br><br>
-        <%= f.label :school %>
-        <%= text_field(:flyer, :school) %><br><br>
-        <%= f.label :feet %>
-        <%= number_field(:flyer, :feet, in: 4..6) %>
-        <%= f.label :inches %>
-        <%= number_field(:flyer, :inches, in: 0..11) %><br><br>
-        <%= f.label :shirt_size %>
-        <%= f.radio_button(:shirt, "S") %>
-            <%= label_tag(:shirt, "Small") %>
-        <%= f.radio_button(:shirt, "M") %>
-            <%= label_tag(:shirt, "Medium") %>
-        <%= f.radio_button(:shirt, "L") %>
-            <%= label_tag(:shirt, "Large") %>
-        <%= f.radio_button(:shirt, "XL") %>
-            <%= label_tag(:shirt, "X-Large") %><br><br>
-        <%= f.label :Can_you_ride_a_bike? %>
-        <%= f.radio_button(:ridebike, "Yes") %>
-            <%= label_tag(:ridebike, "Yes, I Can Ride.") %>
-        <%= f.radio_button(:ridebike, "No") %>
-            <%= label_tag(:ridebike, "No, I Can't Ride.") %><br><br>
-        <%= f.label :physical %> <br>
-        <%= text_area(:flyer, :physical) %><br><br>
-        <%= f.label :actdesc %> <br>
-        <%= text_area(:flyer, :actdesc) %><br><br>
-        <%= f.label :whyjoin %> <br>
-        <%= text_area(:flyer, :whyjoin) %><br><br>
-        <%= f.label :bikeexp %> <br>
-        <%= text_area(:flyer, :bikeexp) %><br><br>
-        <%= f.label :athexp %> <br>
-        <%= text_area(:flyer, :athexp) %><br><br>
-        <%= f.label :goal %> <br>
-        <%= text_area(:flyer, :goal) %><br><br>
-        <%= f.password_field :password, :placeholder => "Password" %>
+
+        <span>Password: <%= f.password_field :password, :placeholder => "Password" %></span>
         <br> <br>
         <%= f.submit "Create" %>
     </div>

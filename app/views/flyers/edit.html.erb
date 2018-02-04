@@ -5,8 +5,8 @@
         <%= text_field(:rider, :firstname) %><br><br>
         <%= f.label :lastname %>
         <%= text_field(:rider, :lastname) %><br><br>
-        <%= f.label :birthdate %>
-        <%= date_field(:rider, :birthdate) %><br><br>
+        <%= f.label :birthdate, "Birth Date" %>
+        <%= date_select(:rider, :birthdate) %><br><br>
         <%= f.label :email %>
         <%= email_field(:rider, :email) %><br><br>
         <%= f.label :phone %>
@@ -61,7 +61,7 @@
         <%= text_area(:rider, :notes) %><br><br>
 
         <span><%= f.label :interview, "Interview Date" %></span>
-        <span><%= date_field(:rider, :interview) %></span>
+        <span><%= date_select(:rider, :interview) %></span>
         <br><br>
         <span><%= f.label :accepted %></span>
         <span><%= f.radio_button(:accepted, true) %>Yes</span>

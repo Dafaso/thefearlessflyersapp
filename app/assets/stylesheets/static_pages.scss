@@ -814,7 +814,8 @@ label[for="rider_feet"], label[for="rider_inches"] {
 
 input[type="text"],
 input[type="email"],
-input[type="number"]{
+input[type="number"],
+input[type="date"]{
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -826,20 +827,22 @@ input[type="number"]{
   border-radius: 0;
 }
 
+input[type="number"] {
+  width: 130px;
+}
+
 input[type="date"]{
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   height: 30px;
-  border: 1px solid rgb(166,166,166);
-  padding-left: 5px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+  width: 150px;
 }
 
 
 input[type="radio"]{
-  height: 14px;
+  height: 13px;
+}
+
+input[type="checkbox"]{
+  height: 13px;
 }
 
 textarea {

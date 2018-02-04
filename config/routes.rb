@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post '/riders' => 'riders#create'
 
 
-  get '/flyers' => 'flyers#index'
+  get '/flyers' => 'flyers#index', as: :flyers
 
   get '/flyers/new' => 'flyers#new'
 

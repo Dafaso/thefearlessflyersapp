@@ -8,7 +8,7 @@ class RiderMailer < ApplicationMailer
   def signup(rider)
     @rider = rider
 
-    mail to: rider.email, subject: "Fearless Flyer Signup", bcc:["dafaso1@gmail.com"]
+    mail to: rider.email, subject: "Fearless Flyer Signup", bcc:[ENV["DAN_EMAIL"], ENV["ANDRE_EMAIL"], ENV["DIANY_EMAIL"]]
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
